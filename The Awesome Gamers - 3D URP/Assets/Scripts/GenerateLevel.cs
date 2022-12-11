@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GenerateLevel : MonoBehaviour
 {
+    
 
     public GameObject[] levelParts;
     public int zPos;
@@ -21,13 +22,16 @@ public class GenerateLevel : MonoBehaviour
         if(isCreating == false){
             isCreating = true;
             StartCoroutine(GenerateNewPart());
+            
         }
     }
 
     IEnumerator GenerateNewPart(){
         // partNum = Random.Range(0, numberOfSections);
         Instantiate(levelParts[0], new Vector3(0,0, zPos), Quaternion.identity);
+        
         zPos += startZSize;
+       
         yield return new WaitForSeconds(0.5f);
         isCreating = false;
     }
