@@ -5,7 +5,6 @@ using UnityEngine;
 public class DemoPlayerMovement : MonoBehaviour
 {
 
-    private float horizontalInput = 0;
     [SerializeField] float horizontalSpeed;
     [SerializeField] float forwardSpeed;
     private Rigidbody rigidbody;
@@ -21,19 +20,16 @@ public class DemoPlayerMovement : MonoBehaviour
     {
 
         // Forward Movement
-
         transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed, Space.World);     
 
-        // Horizontal Movement
-        horizontalInput = Input.GetAxis("Horizontal");
-        movement = new Vector3(Input.GetAxis("Horizontal"), 0 ,0);
-             
+        movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);    
     }
 
 
     // Änderungen an Rigidbody werden in Fixed Update gemacht
     private void FixedUpdate() {
         rigidbody.velocity = movement * horizontalSpeed;
+        
     }
 
     
