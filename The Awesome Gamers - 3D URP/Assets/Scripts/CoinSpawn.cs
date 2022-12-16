@@ -7,43 +7,57 @@ public class CoinSpawn : MonoBehaviour
 
     public GameObject coinPrefab;
     private GameObject temp;
+    //reusable pool of coins => reduces the number of objects that are created
+    private Queue<GameObject> coinPool = new Queue<GameObject>();
 
      void Start()
     {
-        spawnCoins();
+       StartCoroutine(spawnCoins(150));
     }
 
+  
+   IEnumerator  spawnCoins(int numberOfCoins){
 
-   public void spawnCoins(){
-
-        int numberOfCoins = 25;
+        
         for(int i = 0; i < numberOfCoins; i++){
+            // pause after each iteration => allows for coins to be spawned over multiple frames
+            yield return new WaitForEndOfFrame();
+            if(coinPool.Count > 0){
+                temp = coinPool.Dequeue();
+            }
+                
             temp = Instantiate(coinPrefab);
             temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>()); // set the pos of the just spawned coin equal to a random position in the collider
         }
     }
 
-    //return vector3 random position
-    Vector3 GetRandomPointInCollider(Collider collider){
-        Vector3 pos = new Vector3 (Random.Range(collider.bounds.min.x, collider.bounds.max.x),
-        Random.Range(collider.bounds.min.y, collider.bounds.max.y),
-        Random.Range(collider.bounds.min.z, collider.bounds.max.z));
+   Vector3 GetRandomPointInCollider(Collider collider) {
+    Vector3 min = collider.bounds.min;
+    Vector3 max = collider.bounds.max;
 
-    //Randbehandlung
-    //checks if random position generated is on the collider
-    // if it isnt, generate new value for the position that is on the collider
-        if(pos != collider.ClosestPoint(pos)){
-            pos = GetRandomPointInCollider(collider);
-        }
+    // Generate a random position within the bounds of the collider using min and max
+    Vector3 pos = new Vector3(
+        Random.Range(min.x, max.x),
+        Random.Range(min.y, max.y),
+        Random.Range(min.z, max.z)
+    );
 
-        pos.y = 1;
-        return pos;
+    // Ensure that the position is on the collider
+    pos = collider.ClosestPoint(pos);
+
+    // Set the y value of the position to 1, otherwise coins spawn inside the ground
+    pos.y = 1;
+
+    return pos;
+}
+
+// when a coin is no longer needed, it can be returned to the pool to be reused later
+    public void ReturnCoinToPool(GameObject coin){
+    
+        coin.SetActive(false);
+        coinPool.Enqueue(coin);
     }
+  
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
