@@ -8,12 +8,12 @@ public class GenerateLevel : MonoBehaviour
 
     public GameObject[] levelParts;
     public int zPos;
-    private int startZSize;
+    private int startZPos;
     private bool isCreating = false;
     // Start is called before the first frame update
     void Start()
     {
-        startZSize = zPos;        
+        startZPos = zPos;        
     }
 
     // Update is called once per frame
@@ -22,17 +22,16 @@ public class GenerateLevel : MonoBehaviour
         if(isCreating == false){
             isCreating = true;
             StartCoroutine(GenerateNewPart());
-            
         }
     }
 
     IEnumerator GenerateNewPart(){
         // partNum = Random.Range(0, numberOfSections);
-        Instantiate(levelParts[0], new Vector3(0,0, zPos), Quaternion.identity);
+        Instantiate(levelParts[0], new Vector3(0,0, startZPos), Quaternion.identity);
         
-        zPos += startZSize;
+        startZPos += zPos;
        
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(3f);
         isCreating = false;
     }
 }
