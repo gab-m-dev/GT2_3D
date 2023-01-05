@@ -24,7 +24,7 @@ public class DemoPlayerMovement : MonoBehaviour
         highscoreText.text = "Highscore:" + " " + PlayerPrefs.GetFloat("Highscore", 0).ToString();
         //usernameText.text = "Username" + " " + PlayerPrefs.GetString("Username");
         //DISTANCE
-        StartCoroutine(distanceTracker());       
+        StartCoroutine(distanceTracker());
     }
 
     // Update is called once per frame
@@ -32,16 +32,16 @@ public class DemoPlayerMovement : MonoBehaviour
     {
 
         // Forward Movement
-        transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed, Space.World);     
+        transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed, Space.World);
 
-        movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);    
+        movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
     }
 
 
     // Änderungen an Rigidbody werden in Fixed Update gemacht
     private void FixedUpdate() {
         rigidbody.velocity = movement * horizontalSpeed;
-        
+
     }
 
     //DISTANCE
@@ -64,5 +64,5 @@ public class DemoPlayerMovement : MonoBehaviour
         }
     }
 
-    
+
 }
