@@ -18,7 +18,7 @@ public class Highscore : MonoBehaviour
 
     public void highScoreTracker(){
         score++;
-        highScoreText.text = "Highscore: " + score;
+        highScoreText.text = "Coins: " + score;
     }
 
     void Awake(){
