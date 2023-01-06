@@ -16,7 +16,7 @@ public class Coin : MonoBehaviour
             return;
         } 
 
-        Highscore.inst.highScoreTracker();
+        Highscore.inst.increaseScore(1.0f);
         Destroy(gameObject);
     }
 

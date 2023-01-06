@@ -9,7 +9,8 @@ public class GameController : MonoBehaviour
     public Button resetButton;
     public Button startButton;
     public InputField inputName;
-    public DemoPlayerMovement dpm;
+    public Text highScoreText;
+    public Text usernameText;
    // Start is called before the first frame update
 void Start()
 {
@@ -41,16 +42,14 @@ void Update()
     else
     {
         Time.timeScale = 0;
-        
     }
 }
-
 
  public void StoreUsername(){
         // Store username in PlayerPrefs
         
         PlayerPrefs.SetString("Username", inputName.text);
-        dpm.usernameText.text = "Username:" + " " + PlayerPrefs.GetString("Username");
+        usernameText.text = "Username:" + " " + PlayerPrefs.GetString("Username");
     }
 
 
@@ -61,16 +60,11 @@ void Update()
         
     }
 
-
-    
     public void DeletePlayerPrefs(){
 
         PlayerPrefs.DeleteAll();
-        dpm.highscoreText.text = "Highscore:" + "" + 0;
-        dpm.usernameText.text = "Username:";
-        dpm.distanceText.text = "Distance:" + "" + 0; 
-
-
+        highScoreText.text = "Highscore: " + 0;
+        usernameText.text = "Username:";
     }
 
 
