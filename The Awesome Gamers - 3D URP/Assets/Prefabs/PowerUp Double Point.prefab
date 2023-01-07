@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7927901200607740850}
   - component: {fileID: 9145478500146947069}
   m_Layer: 0
-  m_Name: PowerUp
+  m_Name: PowerUp Double Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,3 +111,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obsticle: 0
+  shiled: 0
+  doublePoints: 1
+  blackHole: 0

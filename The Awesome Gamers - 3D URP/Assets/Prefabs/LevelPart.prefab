@@ -532,7 +532,7 @@ MonoBehaviour:
   obsticles:
   - {fileID: 5655336682956982753, guid: 3fbc8a5e99d26a741832fa62d524f53f, type: 3}
   - {fileID: 685363167208788985, guid: f0a3f787c8730514e8b4ea41627ced7f, type: 3}
-  changeForPowerUp: 0.2
+  changeForPowerUp: 0.1
   itemSpots:
   - {fileID: 5540942789410292721}
   - {fileID: 5540942789889830938}

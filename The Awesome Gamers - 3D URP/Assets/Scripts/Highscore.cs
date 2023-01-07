@@ -11,7 +11,6 @@ public class Highscore : MonoBehaviour
     public Text ScoreText;
     public Text highScoreText;
 
-
     public void increaseScore(float ammount){
         score += ammount;
         ScoreText.text = " Score: " + score;
