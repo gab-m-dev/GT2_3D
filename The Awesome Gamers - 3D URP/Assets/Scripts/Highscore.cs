@@ -102,7 +102,6 @@ public class Highscore : MonoBehaviour
         string json = JsonConvert.SerializeObject(scores);
         // Save the json string to PlayerPrefs
         PlayerPrefs.SetString(SCORES_KEY, json);
-        Debug.Log(json);
     }
 
 
@@ -116,8 +115,6 @@ public class Highscore : MonoBehaviour
         List<ScoreData> importedScores = JsonConvert.DeserializeObject<List<ScoreData>>(json);
         if (importedScores is not null){
             scores = importedScores.OrderByDescending(x => x.score).ToList();
-            Debug.Log(importedScores.Count);
-            Debug.Log(scores.Count);
         }
       }
     }

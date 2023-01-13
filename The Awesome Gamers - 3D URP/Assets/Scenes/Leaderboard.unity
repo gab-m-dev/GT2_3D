@@ -229,13 +229,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 186360581}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5883aa763e1492345b3c3de93db2a2e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levelParts:
   - {fileID: 5540942791082173584, guid: c95a51881ee804141a9156cb0ee985ef, type: 3}
+  - {fileID: 5540942791082173584, guid: 55f5a088b9879db4b94f1ea2b07f2f79, type: 3}
+  - {fileID: 5540942791082173584, guid: 841efb898e579a04e863d7f1aef7eb74, type: 3}
   zPos: 300
 --- !u!4 &186360583
 Transform:
@@ -275,7 +277,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 186360581}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f245e3709c8043842854b63ec8b3d8d3, type: 3}
   m_Name: 
@@ -1024,7 +1026,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 147.93503, y: 22}
+  m_AnchoredPosition: {x: 147.93503, y: -25}
   m_SizeDelta: {x: 275.8701, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132194734

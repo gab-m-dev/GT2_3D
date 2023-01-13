@@ -236,6 +236,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelParts:
   - {fileID: 5540942791082173584, guid: c95a51881ee804141a9156cb0ee985ef, type: 3}
+  - {fileID: 5540942791082173584, guid: 5ccf38620874d344fae820240b8e4e1c, type: 3}
+  - {fileID: 5540942791082173584, guid: 841efb898e579a04e863d7f1aef7eb74, type: 3}
   zPos: 300
 --- !u!4 &186360583
 Transform:
@@ -264,11 +266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c15fd2db80a364cab22f8210158b0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
-  username: 
   ScoreText: {fileID: 1743480493}
   highScoreText: {fileID: 36181158}
-  scoreManager: {fileID: 631614620}
   inputName: {fileID: 1131171660}
   rowUI: {fileID: 1929486192953641851, guid: b5f4952e9222366499cec21e503ff0b4, type: 3}
 --- !u!114 &186360585
@@ -322,7 +321,6 @@ MonoBehaviour:
   rankLeaderboard: {fileID: 1795356122}
   usernameLeaderboard: {fileID: 320396249}
   scoreLeaderboard: {fileID: 1707791625}
-  scoreManager: {fileID: 631614620}
   rowUI: {fileID: 1929486192953641851, guid: b5f4952e9222366499cec21e503ff0b4, type: 3}
   Header: {fileID: 306625443}
   Leaderboard: {fileID: 1646589064}
@@ -1108,7 +1106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ab9387fd77afd748bd476efe858144f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scores: []
 --- !u!4 &631614621
 Transform:
   m_ObjectHideFlags: 0
@@ -1849,11 +1846,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c15fd2db80a364cab22f8210158b0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
-  username: 
   ScoreText: {fileID: 1743480493}
   highScoreText: {fileID: 36181158}
-  scoreManager: {fileID: 631614620}
   inputName: {fileID: 1131171660}
   rowUI: {fileID: 1929486192953641851, guid: b5f4952e9222366499cec21e503ff0b4, type: 3}
 --- !u!1 &1707791622
