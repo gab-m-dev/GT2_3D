@@ -12,10 +12,14 @@ public class DemoPlayerMovement : MonoBehaviour
 
     //DISTANCE
     private float distance;
+    
 
     // Start is called before the first frame update
     void Start()
     {
+        
+         Time.timeScale = 0;
+       
         rigidbody = transform.GetComponent<Rigidbody>();
         //DISTANCE
         StartCoroutine(distanceTracker());
