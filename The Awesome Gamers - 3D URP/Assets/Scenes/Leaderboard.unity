@@ -268,6 +268,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 0}
   highScoreText: {fileID: 36181158}
+  usernameText: {fileID: 1132194734}
+  startButton: {fileID: 1912180060}
   inputName: {fileID: 1131171660}
   rowUI: {fileID: 1929486192953641851, guid: b5f4952e9222366499cec21e503ff0b4, type: 3}
 --- !u!114 &186360585
@@ -315,9 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resetButton: {fileID: 1733004879}
   startButton: {fileID: 1912180060}
-  inputName: {fileID: 1131171660}
   highScoreText: {fileID: 36181158}
-  usernameText: {fileID: 1132194734}
   rankLeaderboard: {fileID: 0}
   usernameLeaderboard: {fileID: 0}
   scoreLeaderboard: {fileID: 0}
@@ -378,8 +378,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 99.850006, y: -112}
-  m_SizeDelta: {x: -199.7, y: 100}
+  m_AnchoredPosition: {x: 167.59952, y: -112}
+  m_SizeDelta: {x: -335.1991, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &306625445
 MonoBehaviour:
@@ -950,7 +950,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -260, y: 12}
+  m_AnchoredPosition: {x: -260, y: -41}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1131171662
@@ -1026,7 +1026,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 147.93503, y: -25}
+  m_AnchoredPosition: {x: 147.93503, y: 46}
   m_SizeDelta: {x: 275.8701, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132194734
@@ -1507,7 +1507,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1646589065}
   - component: {fileID: 1646589066}
-  - component: {fileID: 1646589067}
   - component: {fileID: 1646589068}
   m_Layer: 5
   m_Name: Content
@@ -1533,8 +1532,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 84, y: 49}
-  m_SizeDelta: {x: -1128, y: -444}
+  m_AnchoredPosition: {x: -44, y: 54}
+  m_SizeDelta: {x: -1220.8, y: -374.7036}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1646589066
 MonoBehaviour:
@@ -1560,18 +1559,6 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 1
---- !u!114 &1646589067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646589064}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d6f84380b1cfb846bd91aea189091e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1646589068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1586,6 +1573,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 0}
   highScoreText: {fileID: 36181158}
+  usernameText: {fileID: 1132194734}
+  startButton: {fileID: 1912180060}
   inputName: {fileID: 1131171660}
   rowUI: {fileID: 1929486192953641851, guid: b5f4952e9222366499cec21e503ff0b4, type: 3}
 --- !u!1 &1657704369
@@ -1980,7 +1969,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -259, y: -46}
+  m_AnchoredPosition: {x: -259, y: -102}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1912180058

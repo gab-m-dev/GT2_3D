@@ -10,9 +10,9 @@ public class GameController : MonoBehaviour
     private bool gameStarted;
     public Button resetButton;
     public Button startButton;
-    public InputField inputName;
+   
     public Text highScoreText;
-    public Text usernameText;
+     
 
     public Text rankLeaderboard;
     public Text usernameLeaderboard;
@@ -34,7 +34,7 @@ void Awake(){
    // Start is called before the first frame update
 void Start()
 {
-    startButton.onClick.AddListener(StoreUsername);
+    
     startButton.onClick.AddListener(StartGame);
     resetButton.onClick.AddListener(DeletePlayerPrefs);
     //Header.gameObject.SetActive(false);
@@ -51,8 +51,6 @@ void Update()
     if (Input.GetKeyDown(KeyCode.Escape))
     {
         gameStarted = !gameStarted;
-        
-      
 
     }
 
@@ -76,19 +74,11 @@ void Update()
     }
 }
 
- public void StoreUsername(){
-        // Store username in PlayerPrefs
-        
-        PlayerPrefs.SetString("Username", inputName.text);
-        usernameText.text = "Username:" + " " + PlayerPrefs.GetString("Username");
-       // Highscore.inst.SubmitScore(inputName.text);
-        //Debug.Log(inputName.text);
-         
-    }
-
 
      public void StartGame(){
         // Store username in PlayerPrefs
+    // usernameText.text = "Username:" + " " + PlayerPrefs.GetString("Username");
+
         gameStarted = true;
         Time.timeScale = 1;
         SceneManager.LoadScene("SampleScene 1");
@@ -99,7 +89,7 @@ void Update()
 
         PlayerPrefs.DeleteAll();
         highScoreText.text = "Highscore: " + 0;
-        usernameText.text = "Username:";
+        
     }
 
 
