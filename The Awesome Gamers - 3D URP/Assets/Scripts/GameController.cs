@@ -81,7 +81,7 @@ void Update()
 
         gameStarted = true;
         Time.timeScale = 1;
-        SceneManager.LoadScene("SampleScene 1");
+        SceneManager.LoadScene("Game");
         
     }
 

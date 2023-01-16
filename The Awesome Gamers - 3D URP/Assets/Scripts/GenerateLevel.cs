@@ -27,7 +27,6 @@ public class GenerateLevel : MonoBehaviour
 
     IEnumerator GenerateNewPart(){
         int partNum = Random.Range(0, levelParts.Length);
-        Debug.Log(partNum);
         Instantiate(levelParts[partNum], new Vector3(0,0, startZPos), Quaternion.identity);
         
         startZPos += zPos;

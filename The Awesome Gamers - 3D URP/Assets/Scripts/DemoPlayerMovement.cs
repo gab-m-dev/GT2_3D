@@ -43,8 +43,8 @@ public class DemoPlayerMovement : MonoBehaviour
     private IEnumerator distanceTracker() {
         while(true){
             //S = V * t
-            distance = Mathf.Round(forwardSpeed * Time.deltaTime);
-            Highscore.inst.increaseScore(distance);
+            //distance = Mathf.Round(forwardSpeed * Time.deltaTime);
+            Highscore.inst.increaseScore(1.0f);
             yield return new WaitForSeconds(1.0f);
         }
     }
