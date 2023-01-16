@@ -10,8 +10,7 @@ using Newtonsoft.Json;
 public class Highscore : MonoBehaviour
 {
     // Start is called before the first frame update
-    //public float score;
-    //public string username;
+
     private ScoreData scoreData;
     public static Highscore inst;
     private List<ScoreData> scores;
@@ -19,21 +18,18 @@ public class Highscore : MonoBehaviour
 
     public Text ScoreText;
     public Text highScoreText;
+    public Text usernameText;
+    public Button startButton;
     
    
-
-    //public ScoreManager scoreManager;
     public InputField inputName;
     public RowUI rowUI;
-       //private Highscore Newhighscore = new Highscore("",0);
+
 
 
     public void increaseScore(float ammount){
         scoreData.score += ammount;
         ScoreText.text = " Score: " + scoreData.score;
-       // Debug.Log(PlayerPrefs.GetFloat("Highscore", 0));
-        
-      // Highscore newScore = new Highscore(username, score);
       if(scores.Count > 0){
         if(scoreData.score > scores.First().score){
             highScoreText.text = "Highscore: " + scoreData.score.ToString();
@@ -44,25 +40,22 @@ public class Highscore : MonoBehaviour
         
     }
 
-
-
-
     void Awake(){
         // sets inst static variable to refer to the current highscore component
-        inst = this;
-       
+        inst = this;    
     }
     void Start()
     {
+        
+        startButton.onClick.AddListener(submitUsername);    
+        string input = inputName.text;
         scores = new List<ScoreData>();
         LoadScoresFromJson();
-        this.scoreData = new ScoreData(inputName.text, 0);
+        this.scoreData = new ScoreData("", 0);
         if(scores.Count > 0){
             highScoreText.text = "Highscore:" + scores.First().score.ToString();
         }
-       //updateTable();
-        //scoreManager.LoadScoresFromJson();
-        
+       updateTable();  
            
     }
 
@@ -73,10 +66,19 @@ public class Highscore : MonoBehaviour
     }
 
     public void updateList(){
-        scores.Add(scoreData);
+             
+        scoreData.username =  PlayerPrefs.GetString("username");
+        scores.Add(scoreData); 
         scores = scores.OrderByDescending(x => x.score).ToList();
         saveScoreToJson();
         updateTable();
+    }
+
+    public void submitUsername(){
+        usernameText.text = inputName.text;     
+        scoreData.username = inputName.text.ToString();
+        PlayerPrefs.SetString("username",inputName.text);
+ 
     }
 
     public void updateTable(){
@@ -136,173 +138,3 @@ public class ScoreData {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
-public class Highscore : MonoBehaviour
-{
-    // Start is called before the first frame update
-    float score;
-    public static Highscore inst;
-    public Text ScoreText;
-    public Text highScoreText;
-    public GameController gc;
-    public InputField inputName;
-
-    string username;
-    string data;
-
-
-     void Start()
-    {
-       
-
-         // Get the data string from PlayerPrefs
-        string getData = PlayerPrefs.GetFloat("Highscore").ToString();
-        Debug.Log(getData);
-         username = PlayerPrefs.GetString("Username");
-        Debug.Log(username);
-
-
-        if(string.IsNullOrEmpty(data)){
-            score = 0;
-            username = "";
-        }else{
-
-            // Split the data string into an array of strings
-        string[] dataArray = getData.Split(',');
-
-        // Get the username and score from the array
-        username = dataArray[0];
-        Debug.Log("Test" + username);
-        score = int.Parse(dataArray[1]);  
-        Debug.Log("Score" + score);
-
-        highScoreText.text = "Highscore:" + PlayerPrefs.GetFloat("Highscore", 0).ToString(); 
-
-      // highScoreText.text =  "Highscore: " + username + " - " + PlayerPrefs.GetFloat("Highscore", 0).ToString();  
-       Debug.Log(highScoreText.text);  
-
-        }
-
-          
-    }
-
-
-    void Awake(){
-        // sets inst static variable to refer to the current highscore component
-       
-        inst = this;
-    }
-   
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
-    public void increaseScore(float ammount){
-        score += ammount;
-
-       //data = username + "," + score;
-
-        //PlayerPrefs.SetString("Score", data);
-
-        ScoreText.text = " Score: " + score;
-        //Debug.Log(PlayerPrefs.GetFloat("Highscore", 0));
-        if(score > PlayerPrefs.GetFloat("Highscore", 0)){
-            PlayerPrefs.SetFloat("Highscore", score);
-            highScoreText.text = "Highscore: " + score.ToString();
-        }
-    }
-
-    
-}  */
