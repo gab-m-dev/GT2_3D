@@ -35,7 +35,7 @@ public class HealthBehaviour : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
             Time.timeScale = 0;
-            SceneManager.LoadScene("Leaderboard");
+           
         }
     }
 }
