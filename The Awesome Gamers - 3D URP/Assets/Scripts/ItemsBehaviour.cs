@@ -7,6 +7,7 @@ public class ItemsBehaviour : MonoBehaviour
 
     public bool obsticle;
     public bool shiled;
+    public bool doublePoints;
     public bool blackHole;
     private PowerUp powerupManager;
 
@@ -39,6 +40,8 @@ public class ItemsBehaviour : MonoBehaviour
                     player.TakeHit(2f);
                 }
             } 
+        } else if (doublePoints) {
+            powerupManager.ActivateDoublePoints();
         }
         Destroy(gameObject);
     }

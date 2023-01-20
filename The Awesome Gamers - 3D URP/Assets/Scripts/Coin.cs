@@ -4,19 +4,16 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-
-   
     public float turnSpeed = 90f;
+    private PowerUp powerupManager;
     
     void OnTriggerEnter(Collider collider){
     
-        
-
         if(collider.gameObject.name != "StarSparrow1"){
             return;
         } 
 
-        Highscore.inst.highScoreTracker();
+        Highscore.inst.increaseScore(powerupManager.getPoint());
         Destroy(gameObject);
     }
 
@@ -24,7 +21,7 @@ public class Coin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        powerupManager = FindObjectOfType<PowerUp>(); 
     }
 
     // Update is called once per frame

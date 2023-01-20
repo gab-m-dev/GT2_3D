@@ -12,7 +12,7 @@ public class CoinSpawn : MonoBehaviour
 
      void Start()
     {
-       StartCoroutine(spawnCoins(150));
+       StartCoroutine(spawnCoins(20));
     }
 
   
