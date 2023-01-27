@@ -7,6 +7,7 @@ TagManager:
   - Coin
   - ItemSpot
   - HealthText
+  - PlayerTransform
   layers:
   - Default
   - TransparentFX
