@@ -18,12 +18,6 @@ public class PowerUp : MonoBehaviour
         points = 1f;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public float getDamage(){
         return damage;
     }

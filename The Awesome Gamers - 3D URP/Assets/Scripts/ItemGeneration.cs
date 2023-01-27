@@ -18,7 +18,7 @@ public class ItemGeneration : MonoBehaviour
         foreach(GameObject g in itemSpots)
         {
             // Erstllen einer Wahrscheinlichkeitsverteilung für Hindernis oder PowerUp
-            int[] probDistribution = new int[100];
+            int[] probDistribution = new int[500];
             for (int i = 0; i < probDistribution.Length; i++){
                 if (i < changeForPowerUp * 100){
                     probDistribution[i] = 1;

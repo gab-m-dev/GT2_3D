@@ -13,22 +13,34 @@ public class GameController : MonoBehaviour
    
     public Text highScoreText;
      
-
     public Text rankLeaderboard;
     public Text usernameLeaderboard;
     public Text scoreLeaderboard;
-
     
     public RowUI rowUI;
 
 
     public GameObject Header;
     public GameObject Leaderboard;
-    
-    
 
-void Awake(){
-     DontDestroyOnLoad(this);
+
+    //Character selection
+    public GameObject[] characters;
+    public int selectedCharacter = 0;
+
+    public static GameController instance;
+
+
+
+    void Awake(){
+
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        
+        }
+     
 }
     
    // Start is called before the first frame update
@@ -37,8 +49,6 @@ void Start()
     
     startButton.onClick.AddListener(StartGame);
     resetButton.onClick.AddListener(DeletePlayerPrefs);
-    //Header.gameObject.SetActive(false);
-    //Leaderboard.gameObject.SetActive(false);
 
     gameStarted = true;
     Time.timeScale = 1;
@@ -57,13 +67,7 @@ void Update()
     // If game is not started, set Time.timeScale to 0
     if (!gameStarted)
     {
-        Time.timeScale = 0;
-     /*   resetButton.gameObject.SetActive(false);
-        startButton.gameObject.SetActive(false);
-        inputName.gameObject.SetActive(false);
-        Header.gameObject.SetActive(false);
-        Leaderboard.gameObject.SetActive(false); */
-        
+        Time.timeScale = 0;        
     }
     else
     {
@@ -81,6 +85,7 @@ void Update()
 
         gameStarted = true;
         Time.timeScale = 1;
+        PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
         SceneManager.LoadScene("Game");
         
     }
@@ -92,8 +97,23 @@ void Update()
         
     }
 
+    public void NextCharacter()
+    {
+        characters[selectedCharacter].SetActive(false);
+        selectedCharacter = (selectedCharacter + 1) % characters.Length;
+        characters[selectedCharacter].SetActive(true);
+    }
 
-    
+    public void PreviousCharacter()
+    {
+        characters[selectedCharacter].SetActive(false);
+        selectedCharacter--;
+        if (selectedCharacter < 0)
+        {
+            selectedCharacter += characters.Length;
+        }
+        characters[selectedCharacter].SetActive(true);
+    }
 
 }
 

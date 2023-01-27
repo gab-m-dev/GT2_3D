@@ -9,12 +9,12 @@ public class HealthBehaviour : MonoBehaviour
 
     public float MaxHitPoints;
     public float HitPoints;
-    public Text HealthText;
-    public Highscore highscoreScript;
-   
+    private Text HealthText;
+     
     // Start is called before the first frame update
     void Start()
     {
+        HealthText = GameObject.FindGameObjectWithTag("HealthText").GetComponent<Text>();
         HitPoints = MaxHitPoints;
         HealthText.text = "Health: " + HitPoints;
     }
