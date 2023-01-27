@@ -17,7 +17,7 @@ public class DestroyLevelPart : MonoBehaviour
     }
 
     IEnumerator DestroyObjects(){
-        yield return new WaitForSeconds(9f);
+        yield return new WaitForSeconds(10f);
         foreach (Transform child in gameObject.transform) {
             GameObject.Destroy(child.gameObject);
         }

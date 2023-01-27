@@ -84,6 +84,6 @@ public class AudioManager : MonoBehaviour
 
     public void UpdateMixerVolume()
     {
-        musicMixerGroup.audioMixer.SetFloat("Music Volume", Mathf.Log10(AudioOptionsManager.musicVolume) * 20);
+        musicMixerGroup.audioMixer.SetFloat("MusicVolume", Mathf.Log10(AudioOptionsManager.musicVolume) * 20);
     }
 }

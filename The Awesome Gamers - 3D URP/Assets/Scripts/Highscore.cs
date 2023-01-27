@@ -17,52 +17,31 @@ public class Highscore : MonoBehaviour
     private const string SCORES_KEY = "scores";  
 
     public Text ScoreText;
-    public Text highScoreText;
     public Text usernameText;
     public Button startButton;
     
-   
     public InputField inputName;
     public RowUI rowUI;
-
-
-
-    public void increaseScore(float ammount){
-        scoreData.score += ammount;
-        ScoreText.text = " Score: " + scoreData.score;
-      if(scores.Count > 0){
-        if(scoreData.score > scores.First().score){
-            highScoreText.text = "Highscore: " + scoreData.score.ToString();
-        }
-      } else {
-        highScoreText.text = "Highscore: " + scoreData.score.ToString();
-      }
-        
-    }
 
     void Awake(){
         // sets inst static variable to refer to the current highscore component
         inst = this;    
     }
+
     void Start()
     {
-        
         startButton.onClick.AddListener(submitUsername);    
-        string input = inputName.text;
         scores = new List<ScoreData>();
         LoadScoresFromJson();
         this.scoreData = new ScoreData("", 0);
-        if(scores.Count > 0){
-            highScoreText.text = "Highscore:" + scores.First().score.ToString();
-        }
-       updateTable();  
+        usernameText.text = "Username: " + PlayerPrefs.GetString("username");
+        updateTable();  
            
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void increaseScore(float ammount){
+        scoreData.score += ammount;
+        ScoreText.text = " Score: " + scoreData.score;
     }
 
     public void updateList(){
@@ -78,7 +57,6 @@ public class Highscore : MonoBehaviour
         usernameText.text = inputName.text;     
         scoreData.username = inputName.text.ToString();
         PlayerPrefs.SetString("username",inputName.text);
- 
     }
 
     public void updateTable(){
@@ -89,7 +67,7 @@ public class Highscore : MonoBehaviour
           //  scoreManager.saveScoreToJson();
           // var scores = scoreManager.GetHighScore().ToArray();
 
-            for(int i = 0; i < scores.Count; i++){
+            for(int i = 0; i < 3; i++){
                 var row = Instantiate(rowUI, transform).GetComponent<RowUI>();
                 row.rank.text = (i + 1).ToString();
                 row.username.text = scores[i].username;
@@ -98,21 +76,22 @@ public class Highscore : MonoBehaviour
 
     }
 
-    public void saveScoreToJson(){
+    private void saveScoreToJson(){
         // Convert the scores list to a json string
-        //string json = JsonUtility.ToJson(scores);
         string json = JsonConvert.SerializeObject(scores);
+        Debug.Log(json);
         // Save the json string to PlayerPrefs
         PlayerPrefs.SetString(SCORES_KEY, json);
+
     }
 
 
-    public void LoadScoresFromJson(){
+    private void LoadScoresFromJson(){
       
       if(PlayerPrefs.HasKey(SCORES_KEY)){
         // Load the json string from PlayerPrefs
         string json = PlayerPrefs.GetString(SCORES_KEY);
-        Debug.Log(json);
+        //Debug.Log(json);
         // Convert the json string back to a scores list
         List<ScoreData> importedScores = JsonConvert.DeserializeObject<List<ScoreData>>(json);
         if (importedScores is not null){
@@ -122,7 +101,7 @@ public class Highscore : MonoBehaviour
     }
 
     private void OnDestroy(){
-        //saveScoreToJson();
+        saveScoreToJson();
     }
 
 }

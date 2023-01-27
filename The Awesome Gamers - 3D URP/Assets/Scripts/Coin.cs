@@ -9,7 +9,7 @@ public class Coin : MonoBehaviour
     
     void OnTriggerEnter(Collider collider){
     
-        if(collider.gameObject.name != "StarSparrow1"){
+        if(collider.gameObject.tag != "Player"){
             return;
         } 
 
