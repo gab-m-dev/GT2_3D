@@ -6,7 +6,7 @@ public class DestroyLevelPart : MonoBehaviour
 {
 
     private Transform playerTransform;
-    //public GameObject endpoint;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,14 +22,16 @@ public class DestroyLevelPart : MonoBehaviour
     }
 
     IEnumerator DestroyObjects(){
-        yield return new WaitForSeconds(3f);
-        //Debug.Log(playerTransform.transform.position.z);
-        Debug.Log(gameObject.transform.position.z);
-        //Debug.Log(playerTransform.position.z - gameObject.transform.position.z);
-        if (playerTransform.position.z - gameObject.transform.position.z > 650){
-            
-            Debug.Log("zerstoert");
-            Destroy(gameObject);
+        while(true){
+            yield return new WaitForSeconds(3f);
+     
+            if ((gameObject.transform.position.z - playerTransform.position.z) < -650f){
+                foreach (Transform child in gameObject.transform) {
+                    GameObject.Destroy(child.gameObject);
+                }
+                Destroy(gameObject);
+            }
         }
+        
     }
 }
