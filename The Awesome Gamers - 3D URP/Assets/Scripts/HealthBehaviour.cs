@@ -34,6 +34,9 @@ public class HealthBehaviour : MonoBehaviour
             Highscore.inst.updateList();
             Destroy(gameObject);
 
+            FindObjectOfType<AudioManager>().Stop("GameMusic");
+            FindObjectOfType<AudioManager>().Play("MenuMusc");
+
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
             Time.timeScale = 0;

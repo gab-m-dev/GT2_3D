@@ -31,7 +31,6 @@ public class GameController : MonoBehaviour
     public static GameController instance;
 
 
-
     void Awake(){
 
         if (instance == null)
@@ -44,39 +43,38 @@ public class GameController : MonoBehaviour
 }
     
    // Start is called before the first frame update
-void Start()
-{
+    void Start()
+    {
     
-    startButton.onClick.AddListener(StartGame);
-    resetButton.onClick.AddListener(DeletePlayerPrefs);
+        startButton.onClick.AddListener(StartGame);
+        resetButton.onClick.AddListener(DeletePlayerPrefs);
 
-    gameStarted = true;
-    Time.timeScale = 1;
-}
-
-// Update is called once per frame
-void Update()
-{
-    // If player hits the escape key, toggle gameStarted variable
-    if (Input.GetKeyDown(KeyCode.Escape))
-    {
-        gameStarted = !gameStarted;
-
-    }
-
-    // If game is not started, set Time.timeScale to 0
-    if (!gameStarted)
-    {
-        Time.timeScale = 0;        
-    }
-    else
-    {
-        //resetButton.gameObject.SetActive(true);
+        gameStarted = true;
         Time.timeScale = 1;
-        //Header.gameObject.SetActive(true);
-      //  Leaderboard.gameObject.SetActive(true);
     }
-}
+
+    // Update is called once per frame
+    void Update()
+    {
+        // If player hits the escape key, toggle gameStarted variable
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            gameStarted = !gameStarted;
+        }
+
+        // If game is not started, set Time.timeScale to 0
+        if (!gameStarted)
+        {
+            Time.timeScale = 0;        
+        }
+        else
+        {
+            //resetButton.gameObject.SetActive(true);
+            Time.timeScale = 1;
+            //Header.gameObject.SetActive(true);
+            //  Leaderboard.gameObject.SetActive(true);
+        }
+    }
 
 
      public void StartGame(){
@@ -86,6 +84,12 @@ void Update()
         gameStarted = true;
         Time.timeScale = 1;
         PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
+        
+        Debug.Log("Halllooo");
+        FindObjectOfType<AudioManager>().Stop("MenuMusic");
+        FindObjectOfType<AudioManager>().Play("GameMusic");
+
+
         SceneManager.LoadScene("Game");
         
     }

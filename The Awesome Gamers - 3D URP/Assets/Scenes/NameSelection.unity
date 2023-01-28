@@ -3709,7 +3709,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1912180058}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
+          type: 3}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GameMusic
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
+          type: 3}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Stop
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MenuMusic
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1915094553
 GameObject:
   m_ObjectHideFlags: 0
@@ -4124,6 +4150,12 @@ PrefabInstance:
       propertyPath: startButton
       value: 
       objectReference: {fileID: 1912180060}
+    - target: {fileID: 2522802996641404506, guid: 39f118c6492a2f8448aabcea3a7a250d,
+        type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
+        type: 3}
     - target: {fileID: 2522802996641404506, guid: 39f118c6492a2f8448aabcea3a7a250d,
         type: 3}
       propertyPath: characters.Array.data[0]
