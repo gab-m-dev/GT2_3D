@@ -57,17 +57,13 @@ public class Highscore : MonoBehaviour
         usernameText.text = inputName.text;     
         scoreData.username = inputName.text.ToString();
         PlayerPrefs.SetString("username",inputName.text);
+       
     }
 
     public void updateTable(){
-          //float scoreBefore = PlayerPrefs.GetFloat("Highscore");
-         //string usernameBefore = PlayerPrefs.GetString("Username");
-          //   scoreManager.addScoreToList(new Highscore(usernameBefore, scoreBefore));
-          //  scoreManager.addScoreToList(new Highscore("ivancho", 12));
-          //  scoreManager.saveScoreToJson();
-          // var scores = scoreManager.GetHighScore().ToArray();
+        
 
-            for(int i = 0; i < 3; i++){
+            for(int i = 0; i <  Mathf.Min(scores.Count, 3); i++){
                 var row = Instantiate(rowUI, transform).GetComponent<RowUI>();
                 row.rank.text = (i + 1).ToString();
                 row.username.text = scores[i].username;
@@ -100,9 +96,9 @@ public class Highscore : MonoBehaviour
       }
     }
 
-    private void OnDestroy(){
+  /*  private void OnDestroy(){
         saveScoreToJson();
-    }
+    }  */
 
 }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class GameController : MonoBehaviour
 {
@@ -48,7 +49,7 @@ void Start()
 {
     
     startButton.onClick.AddListener(StartGame);
-    resetButton.onClick.AddListener(DeletePlayerPrefs);
+    resetButton.onClick.AddListener(ClearData);
 
     gameStarted = true;
     Time.timeScale = 1;
@@ -85,15 +86,18 @@ void Update()
 
         gameStarted = true;
         Time.timeScale = 1;
+        
         PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
         SceneManager.LoadScene("Game");
         
     }
 
-    public void DeletePlayerPrefs(){
+    public void ClearData(){
+        
+        PlayerPrefs.DeleteKey("scores");
 
         PlayerPrefs.DeleteAll();
-        highScoreText.text = "Highscore: " + 0;
+       // highScoreText.text = "Highscore: " + 0;
         
     }
 

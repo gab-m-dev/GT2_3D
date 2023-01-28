@@ -1846,6 +1846,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
+        type: 3}
       propertyPath: sounds.Array.data[1].loop
       value: 0
       objectReference: {fileID: 0}
@@ -1858,6 +1863,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969685267817657461, guid: 26105019a6a247e48923d7627e7c700d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7969685267817657463, guid: 26105019a6a247e48923d7627e7c700d,
         type: 3}
@@ -3209,7 +3219,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1084686310}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a52c1863afd40e8439d3189a66dc488c, type: 3}
   m_Name: 

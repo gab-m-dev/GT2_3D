@@ -10,6 +10,7 @@ public class HealthBehaviour : MonoBehaviour
     public float MaxHitPoints;
     public float HitPoints;
     private Text HealthText;
+    private bool isDead = false;
      
     // Start is called before the first frame update
     void Start()
@@ -28,8 +29,9 @@ public class HealthBehaviour : MonoBehaviour
     public void TakeHit(float damage){
         HitPoints -= damage;
         HealthText.text = "Health: " + HitPoints;
-        if(HitPoints <= 0)
+        if(HitPoints <= 0 && isDead == false) 
         {
+            isDead = true;
             
             Highscore.inst.updateList();
             Destroy(gameObject);
