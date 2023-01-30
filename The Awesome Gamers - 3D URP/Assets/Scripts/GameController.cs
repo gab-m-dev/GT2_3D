@@ -47,7 +47,7 @@ public class GameController : MonoBehaviour
     {
     
         startButton.onClick.AddListener(StartGame);
-        resetButton.onClick.AddListener(DeletePlayerPrefs);
+        resetButton.onClick.AddListener(ClearData);
 
         gameStarted = true;
         Time.timeScale = 1;
@@ -95,12 +95,14 @@ public class GameController : MonoBehaviour
         
     }
 
-    public void DeletePlayerPrefs(){
+    public void ClearData()
+    {
+
+        PlayerPrefs.DeleteKey("scores");
 
         PlayerPrefs.DeleteAll();
-        FindObjectOfType<AudioManager>().Play("ButtonSubmit");
-        highScoreText.text = "Highscore: " + 0;
-        
+        // highScoreText.text = "Highscore: " + 0;
+
     }
 
     public void NextCharacter()

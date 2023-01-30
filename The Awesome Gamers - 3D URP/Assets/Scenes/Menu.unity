@@ -3597,7 +3597,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 405}
-  m_SizeDelta: {x: 700, y: 100}
+  m_SizeDelta: {x: 800, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1466541323
 MonoBehaviour:
@@ -3619,7 +3619,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Space Race
+  m_text: Space Runner
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3d0dd4c0822d70b488911be92359c02a, type: 2}
   m_sharedMaterial: {fileID: 2855619435122908611, guid: 3d0dd4c0822d70b488911be92359c02a,

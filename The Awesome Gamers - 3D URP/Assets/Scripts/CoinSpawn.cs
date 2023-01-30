@@ -46,7 +46,7 @@ public class CoinSpawn : MonoBehaviour
     pos = collider.ClosestPoint(pos);
 
     // Set the y value of the position to 1, otherwise coins spawn inside the ground
-    pos.y = 1;
+    pos.y = Random.Range(min.y, max.y);
 
     return pos;
 }

@@ -60,14 +60,8 @@ public class Highscore : MonoBehaviour
     }
 
     public void updateTable(){
-          //float scoreBefore = PlayerPrefs.GetFloat("Highscore");
-         //string usernameBefore = PlayerPrefs.GetString("Username");
-          //   scoreManager.addScoreToList(new Highscore(usernameBefore, scoreBefore));
-          //  scoreManager.addScoreToList(new Highscore("ivancho", 12));
-          //  scoreManager.saveScoreToJson();
-          // var scores = scoreManager.GetHighScore().ToArray();
-
-            for(int i = 0; i < 3; i++){
+         
+            for(int i = 0; i < 5; i++){
                 var row = Instantiate(rowUI, transform).GetComponent<RowUI>();
                 row.rank.text = (i + 1).ToString();
                 row.username.text = scores[i].username;
