@@ -35,7 +35,7 @@ public class HealthBehaviour : MonoBehaviour
             Destroy(gameObject);
 
             FindObjectOfType<AudioManager>().Stop("GameMusic");
-            FindObjectOfType<AudioManager>().Play("MenuMusc");
+            FindObjectOfType<AudioManager>().Play("MenuMusic");
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 

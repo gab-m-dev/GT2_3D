@@ -88,6 +88,7 @@ public class GameController : MonoBehaviour
         Debug.Log("Halllooo");
         FindObjectOfType<AudioManager>().Stop("MenuMusic");
         FindObjectOfType<AudioManager>().Play("GameMusic");
+        FindObjectOfType<AudioManager>().Play("ButtonSubmit");
 
 
         SceneManager.LoadScene("Game");
@@ -97,6 +98,7 @@ public class GameController : MonoBehaviour
     public void DeletePlayerPrefs(){
 
         PlayerPrefs.DeleteAll();
+        FindObjectOfType<AudioManager>().Play("ButtonSubmit");
         highScoreText.text = "Highscore: " + 0;
         
     }
