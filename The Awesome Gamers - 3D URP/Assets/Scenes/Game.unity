@@ -6203,20 +6203,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!114 &3350734458034386650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454331724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfc87ad9a528c354cb67b73f0092904c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinPrefab: {fileID: 2896214653862318134, guid: 41e99c5a53b4e7d4fbadb9e21ad9e43f,
-    type: 3}
 --- !u!1001 &8249733346275876134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6339,5 +6325,6 @@ PrefabInstance:
       propertyPath: obsticles.Array.size
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8595770656036861299, guid: e32d447389fd37347af6938b18eff4c9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e32d447389fd37347af6938b18eff4c9, type: 3}

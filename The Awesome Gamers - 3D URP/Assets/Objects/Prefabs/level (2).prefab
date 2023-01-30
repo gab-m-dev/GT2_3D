@@ -1691,7 +1691,7 @@ GameObject:
   - component: {fileID: 7299431643823391040}
   - component: {fileID: 6568400881441731562}
   - component: {fileID: 8809690265139843130}
-  - component: {fileID: 752351339102157958}
+  - component: {fileID: 5630735968646905203}
   m_Layer: 0
   m_Name: Cylinder.010
   m_TagString: Untagged
@@ -1778,7 +1778,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5731547941117289742, guid: c4d97a12c85b4fa4a998f14b0537285f, type: 3}
---- !u!114 &752351339102157958
+--- !u!114 &5630735968646905203
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1914,7 +1914,6 @@ GameObject:
   - component: {fileID: 2966802428749469285}
   - component: {fileID: 9037911334042847218}
   - component: {fileID: 6874616262885137148}
-  - component: {fileID: 8595770656036861299}
   m_Layer: 0
   m_Name: level (2)
   m_TagString: Untagged
@@ -2023,20 +2022,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74947e3e4f627224bb848fef6131127f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8595770656036861299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7685280753511160301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfc87ad9a528c354cb67b73f0092904c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinPrefab: {fileID: 2896214653862318134, guid: 41e99c5a53b4e7d4fbadb9e21ad9e43f,
-    type: 3}
 --- !u!1 &7880855507690669421
 GameObject:
   m_ObjectHideFlags: 0
