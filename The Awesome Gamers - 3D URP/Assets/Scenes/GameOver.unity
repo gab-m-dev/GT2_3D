@@ -1985,7 +1985,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7969685267817657462, guid: 26105019a6a247e48923d7627e7c700d,
+      - m_Target: {fileID: 6371432046983685528, guid: f06f739087e7b844ea526413677b141b,
           type: 3}
         m_TargetAssemblyTypeName: AudioOptionsManager, Assembly-CSharp
         m_MethodName: OnMusicSliderValueChange
@@ -4873,7 +4873,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7969685267817657462, guid: 26105019a6a247e48923d7627e7c700d,
+      - m_Target: {fileID: 6371432046983685528, guid: f06f739087e7b844ea526413677b141b,
           type: 3}
         m_TargetAssemblyTypeName: AudioOptionsManager, Assembly-CSharp
         m_MethodName: OnEffectsSliderValueChange

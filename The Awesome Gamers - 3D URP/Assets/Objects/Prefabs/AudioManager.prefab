@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7969685267817657461
+--- !u!1 &6371432046983685531
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7969685267817657463}
-  - component: {fileID: 7969685267817657460}
-  - component: {fileID: 7969685267817657462}
+  - component: {fileID: 6371432046983685529}
+  - component: {fileID: 6371432046983685530}
+  - component: {fileID: 6371432046983685528}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7969685267817657463
+--- !u!4 &6371432046983685529
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7969685267817657461}
+  m_GameObject: {fileID: 6371432046983685531}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,13 +33,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7969685267817657460
+--- !u!114 &6371432046983685530
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7969685267817657461}
+  m_GameObject: {fileID: 6371432046983685531}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a52c1863afd40e8439d3189a66dc488c, type: 3}
@@ -73,19 +73,54 @@ MonoBehaviour:
     loop: 0
   - audioType: 0
     source: {fileID: 0}
-    name: ButtonSubmit2
-    clip: {fileID: 8300000, guid: a00a27dacfcc94b4abbe9ec734a8abea, type: 3}
+    name: Collect
+    clip: {fileID: 8300000, guid: 3c3a4c3c435ea714cb0646fd5b90fa77, type: 3}
+    volume: 0.719
+    pitch: 1
+    loop: 0
+  - audioType: 1
+    source: {fileID: 0}
+    name: MenuMusic
+    clip: {fileID: 8300000, guid: 3c2b094557b87ee4fb191752e1794eb6, type: 3}
     volume: 1
     pitch: 1
     loop: 0
+  - audioType: 1
+    source: {fileID: 0}
+    name: GameMusic
+    clip: {fileID: 8300000, guid: da920b2c2c28b844294c4787ce6e3ac3, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+  - audioType: 0
+    source: {fileID: 0}
+    name: Explosion
+    clip: {fileID: 8300000, guid: 733a0ff7727334749a0381b7092162b3, type: 3}
+    volume: 0.75
+    pitch: 1
+    loop: 0
+  - audioType: 0
+    source: {fileID: 0}
+    name: PowerUp
+    clip: {fileID: 8300000, guid: eb3b9518c60ccb444b446a176b3dd1ac, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - audioType: 0
+    source: {fileID: 0}
+    name: SpaceShip
+    clip: {fileID: 8300000, guid: 6a3c9e6a0f02e3d4084a7986adbf1665, type: 3}
+    volume: 0.375
+    pitch: 1
+    loop: 1
   sliderValue: 1
---- !u!114 &7969685267817657462
+--- !u!114 &6371432046983685528
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7969685267817657461}
+  m_GameObject: {fileID: 6371432046983685531}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60a00ed0d47a4314a92bfaacceeea9ea, type: 3}

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Glow
+  m_Name: Glow2
   m_Shader: {fileID: -6465566751694194690, guid: 0c7e0891d98a09a4ea2747ad7c95e21d,
     type: 3}
   m_ValidKeywords: []
@@ -35,15 +35,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha: 0.297
+    - _Alpha: 0.275
     - _Metallic: 0.808
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0.666
     m_Colors:
-    - _BaseColor: {r: 0, g: 1, b: 1, a: 0.18431373}
+    - _BaseColor: {r: 0.031016378, g: 0.10892532, b: 0.16037738, a: 0.18431373}
     - _BottomColor: {r: 0.28998333, g: 0, b: 1, a: 0.27058825}
-    - _TopColor: {r: 0.049071256, g: 0, b: 1, a: 0.30588236}
+    - _TopColor: {r: 0.18297386, g: 0, b: 1, a: 0.30588236}
   m_BuildTextureStacks: []
 --- !u!114 &864629498966992824
 MonoBehaviour:

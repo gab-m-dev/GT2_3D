@@ -6,10 +6,13 @@ using UnityEngine.UI;
 public class PowerUp : MonoBehaviour
 {
 
-    public float powerUpDuration;
+    public float powerUpDurationShield;
+    public float powerUpDurationDoublePoints;
     private float damage;
     private float points;
     public Text PowerUpText;
+
+    public GameObject aura;
 
     // Start is called before the first frame update
     void Start()
@@ -39,13 +42,15 @@ public class PowerUp : MonoBehaviour
     }
 
     IEnumerator Shiled(){       
-        yield return new WaitForSeconds(powerUpDuration);
+        yield return new WaitForSeconds(powerUpDurationShield);
         damage = 1f;
         PowerUpText.text = "PowerUp: -";
+
+        aura.SetActive(true);
     }
 
     IEnumerator DoublePoints(){       
-        yield return new WaitForSeconds(powerUpDuration);
+        yield return new WaitForSeconds(powerUpDurationDoublePoints);
         points = 1f;
         PowerUpText.text = "PowerUp: -";
     }

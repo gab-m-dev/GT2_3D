@@ -14,6 +14,7 @@ public class Coin : MonoBehaviour
         } 
 
         Highscore.inst.increaseScore(powerupManager.getPoint());
+        FindObjectOfType<AudioManager>().Play("Collect");
         Destroy(gameObject);
     }
 

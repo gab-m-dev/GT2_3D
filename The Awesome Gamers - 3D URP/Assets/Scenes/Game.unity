@@ -691,8 +691,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f245e3709c8043842854b63ec8b3d8d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUpDuration: 5
+  powerUpDurationShield: 5
+  powerUpDurationDoublePoints: 10
   PowerUpText: {fileID: 340473304}
+  aura: {fileID: 9003633138853934875, guid: 04520e794a558c945a9864b331210a78, type: 3}
 --- !u!1 &189628973
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,7 +2561,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6371432046983685528, guid: f06f739087e7b844ea526413677b141b,
+          type: 3}
         m_TargetAssemblyTypeName: AudioOptionsManager, Assembly-CSharp
         m_MethodName: OnEffectsSliderValueChange
         m_Mode: 0
@@ -3894,7 +3897,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6371432046983685528, guid: f06f739087e7b844ea526413677b141b,
+          type: 3}
         m_TargetAssemblyTypeName: AudioOptionsManager, Assembly-CSharp
         m_MethodName: OnMusicSliderValueChange
         m_Mode: 0
