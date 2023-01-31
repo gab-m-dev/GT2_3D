@@ -54,6 +54,7 @@ public class PauseMenu : MonoBehaviour
     public void QuitGame()
     {
         FindObjectOfType<AudioManager>().Stop("GameMusic");
+        FindObjectOfType<AudioManager>().Stop("SpaceShip");
         FindObjectOfType<AudioManager>().Play("MenuMusic");
         FindObjectOfType<AudioManager>().Play("ButtonSubmit");
         
