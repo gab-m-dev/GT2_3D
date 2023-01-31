@@ -97,9 +97,10 @@ public class GameController : MonoBehaviour
 
     public void ClearData()
     {
-        PlayerPrefs.DeleteKey("scores");
+        //PlayerPrefs.DeleteKey("scores");
 
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
+        Highscore.inst.ClearData();
         // highScoreText.text = "Highscore: " + 0;
     }
 

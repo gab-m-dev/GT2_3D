@@ -11,12 +11,16 @@ public class PopulateHighScore : MonoBehaviour
     private List<ScoreData> scores;
     private const string SCORES_KEY = "scores";
     public TextMeshProUGUI topFiveHighscores;
+    public TextMeshProUGUI currentScoreTxt;
+
+    private float currentScore;
 
     // Start is called before the first frame update
     void Start()
     {
         scores = new List<ScoreData>();
         LoadScoresFromJson();
+        currentScore = PlayerPrefs.GetFloat("currentScore");
         populateTopFiveHighscores();
     }
 
@@ -34,12 +38,24 @@ public class PopulateHighScore : MonoBehaviour
       }
     }
 
-    private void populateTopFiveHighscores(){
-        if (topFiveHighscores is not null){
-            if(scores.Count > 4){
-                topFiveHighscores.text = scores[0].username + ": " + scores[0].score + "\n" + scores[1].username + ": " + scores[1].score + "\n" + scores[2].username + ": " + scores[2].score + "\n" + scores[3].username + ": " + scores[3].score;
-            } else if(scores.Count > 0){
-                topFiveHighscores.text = scores[0].username + ": " + scores[0].score;
+    private void populateTopFiveHighscores()
+    {
+        currentScoreTxt.text = currentScore.ToString();
+        if (topFiveHighscores is not null)
+        {
+            if (scores.Count > 5)
+            {
+                topFiveHighscores.text =  scores[0].username + ":                               " + scores[0].score + "\n" + scores[1].username + ":                               " + scores[1].score + "\n" + scores[2].username + ":                               " + scores[2].score + "\n" + scores[3].username + ":                               " + scores[3].score;
+            }
+            else if (scores.Count > 0)
+            {
+                int size = scores.Count;
+                string message = " ";
+                for (int i = 0; i < size; i++)
+                {
+                    message += scores[i].username + ":                               " + scores[i].score + "\n";
+                }
+                topFiveHighscores.text = message;
             }
         }
     }

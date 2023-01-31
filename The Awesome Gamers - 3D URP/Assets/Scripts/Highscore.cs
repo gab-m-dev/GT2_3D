@@ -18,7 +18,7 @@ public class Highscore : MonoBehaviour
 
     public Text ScoreText;
     public Text usernameText;
-    public Button startButton;
+    public Button startButton ;
     
     public InputField inputName;
     public RowUI rowUI;
@@ -35,8 +35,7 @@ public class Highscore : MonoBehaviour
         LoadScoresFromJson();
         this.scoreData = new ScoreData("", 0);
         usernameText.text = "Username: " + PlayerPrefs.GetString("username");
-        updateTable();  
-           
+        updateTable();             
     }
 
     public void increaseScore(float ammount){
@@ -47,6 +46,7 @@ public class Highscore : MonoBehaviour
     public void updateList(){
              
         scoreData.username =  PlayerPrefs.GetString("username");
+        PlayerPrefs.SetFloat("currentScore", scoreData.score);
         scores.Add(scoreData); 
         scores = scores.OrderByDescending(x => x.score).ToList();
         saveScoreToJson();
@@ -59,15 +59,19 @@ public class Highscore : MonoBehaviour
         PlayerPrefs.SetString("username",inputName.text);
     }
 
-    public void updateTable(){
-         
-            for(int i = 0; i < 5; i++){
+    public void updateTable()
+    {
+        if (scores.Count <= 5)
+        {
+            int size = scores.Count;
+            for (int i = 0; i < size; i++)
+            {
                 var row = Instantiate(rowUI, transform).GetComponent<RowUI>();
                 row.rank.text = (i + 1).ToString();
                 row.username.text = scores[i].username;
                 row.score.text = scores[i].score.ToString();
             }
-
+        }
     }
 
     private void saveScoreToJson(){
@@ -96,6 +100,17 @@ public class Highscore : MonoBehaviour
 
     private void OnDestroy(){
         saveScoreToJson();
+    }
+
+    public void ClearData()
+    {
+        PlayerPrefs.DeleteKey(SCORES_KEY);
+        var rows = GetComponentsInChildren<RowUI>();
+        foreach (var row in rows)
+        {
+            Destroy(row.gameObject);
+        }
+        scores.Clear();
     }
 
 }
