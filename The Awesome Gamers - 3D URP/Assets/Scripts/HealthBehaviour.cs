@@ -33,7 +33,7 @@ public class HealthBehaviour : MonoBehaviour
             
             Highscore.inst.updateList();
             Destroy(gameObject);
-
+            FindObjectOfType<AudioManager>().Stop("SpaceShip");
             FindObjectOfType<AudioManager>().Stop("GameMusic");
             FindObjectOfType<AudioManager>().Play("MenuMusic");
 

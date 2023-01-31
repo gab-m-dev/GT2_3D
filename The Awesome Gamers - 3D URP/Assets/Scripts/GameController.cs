@@ -89,6 +89,7 @@ public class GameController : MonoBehaviour
         FindObjectOfType<AudioManager>().Stop("MenuMusic");
         FindObjectOfType<AudioManager>().Play("GameMusic");
         FindObjectOfType<AudioManager>().Play("ButtonSubmit");
+        FindObjectOfType<AudioManager>().Play("SpaceShip");
 
 
         SceneManager.LoadScene("Game");

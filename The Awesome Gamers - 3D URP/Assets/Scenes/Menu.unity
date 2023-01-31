@@ -2459,7 +2459,7 @@ PrefabInstance:
     - target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
         type: 3}
       propertyPath: sounds.Array.size
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
         type: 3}
@@ -2495,11 +2495,36 @@ PrefabInstance:
         type: 3}
       propertyPath: sounds.Array.data[6].clip
       value: 
-      objectReference: {fileID: 8300000, guid: e1b1cac8f366fbe438a21d590996d918, type: 3}
+      objectReference: {fileID: 8300000, guid: 733a0ff7727334749a0381b7092162b3, type: 3}
     - target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
         type: 3}
       propertyPath: sounds.Array.data[6].name
-      value: GameMusic
+      value: Explosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
+        type: 3}
+      propertyPath: sounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: eb3b9518c60ccb444b446a176b3dd1ac, type: 3}
+    - target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
+        type: 3}
+      propertyPath: sounds.Array.data[7].name
+      value: PowerUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
+        type: 3}
+      propertyPath: sounds.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a3c9e6a0f02e3d4084a7986adbf1665, type: 3}
+    - target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
+        type: 3}
+      propertyPath: sounds.Array.data[8].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
+        type: 3}
+      propertyPath: sounds.Array.data[8].name
+      value: SpaceShip
       objectReference: {fileID: 0}
     - target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
         type: 3}
@@ -2518,18 +2543,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
         type: 3}
+      propertyPath: sounds.Array.data[7].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
+        type: 3}
+      propertyPath: sounds.Array.data[8].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
+        type: 3}
       propertyPath: sounds.Array.data[4].volume
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
         type: 3}
       propertyPath: sounds.Array.data[5].volume
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
         type: 3}
       propertyPath: sounds.Array.data[6].volume
-      value: 1
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
+        type: 3}
+      propertyPath: sounds.Array.data[7].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
+        type: 3}
+      propertyPath: sounds.Array.data[8].volume
+      value: 0.375
       objectReference: {fileID: 0}
     - target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
         type: 3}
@@ -2544,7 +2589,7 @@ PrefabInstance:
     - target: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
         type: 3}
       propertyPath: sounds.Array.data[6].audioType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7969685267817657461, guid: 26105019a6a247e48923d7627e7c700d,
         type: 3}

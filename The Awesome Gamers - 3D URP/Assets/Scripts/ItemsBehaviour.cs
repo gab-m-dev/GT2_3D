@@ -36,8 +36,8 @@ public class ItemsBehaviour : MonoBehaviour
             var player = collision.collider.GetComponent<HealthBehaviour>();
             if (player)
             {
-               // audioManager.Play("AsteroidCollision");
-               
+                // audioManager.Play("AsteroidCollision");
+                FindObjectOfType<AudioManager>().Play("Explosion");
                 player.TakeHit(powerupManager.getDamage());
             }
         }
@@ -46,7 +46,8 @@ public class ItemsBehaviour : MonoBehaviour
             var player = collision.collider.GetComponent<HealthBehaviour>();
             if (player)
             {
-                player.TakeHit(powerupManager.getDamage());
+                FindObjectOfType<AudioManager>().Play("Explosion");
+                player.TakeHit(2f);
             }
         }
         else if (blackHole)
@@ -56,6 +57,7 @@ public class ItemsBehaviour : MonoBehaviour
             {
                 if (powerupManager.getDamage() != 0)
                 {
+                    FindObjectOfType<AudioManager>().Play("Explosion");
                     player.TakeHit(2f);
                 }
             }
@@ -63,10 +65,12 @@ public class ItemsBehaviour : MonoBehaviour
         else if (doublePoints)
         {
             powerupManager.ActivateDoublePoints();
+            FindObjectOfType<AudioManager>().Play("PowerUp");
         }
         else if (shiled)
         {
             powerupManager.ActivateShield();
+            FindObjectOfType<AudioManager>().Play("PowerUp");
         }
         Destroy(gameObject);
     }
