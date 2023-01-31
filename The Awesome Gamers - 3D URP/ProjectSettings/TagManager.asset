@@ -8,6 +8,7 @@ TagManager:
   - ItemSpot
   - HealthText
   - PlayerTransform
+  - PowerUpAura
   layers:
   - Default
   - TransparentFX

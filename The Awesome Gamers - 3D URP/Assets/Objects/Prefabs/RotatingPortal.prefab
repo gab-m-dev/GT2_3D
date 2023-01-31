@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 4786143956922690685}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.02797556, z: 0.0015149117}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5035435527849528312}
@@ -199,3 +199,4 @@ MonoBehaviour:
   doublePoints: 0
   blackHole: 1
   rotorBlades: 0
+  aura: {fileID: 0}

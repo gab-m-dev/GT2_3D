@@ -85,7 +85,6 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1;
         PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
         
-        Debug.Log("Halllooo");
         FindObjectOfType<AudioManager>().Stop("MenuMusic");
         FindObjectOfType<AudioManager>().Play("GameMusic");
         FindObjectOfType<AudioManager>().Play("ButtonSubmit");

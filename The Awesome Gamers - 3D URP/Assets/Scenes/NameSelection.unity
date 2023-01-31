@@ -295,8 +295,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f245e3709c8043842854b63ec8b3d8d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUpDuration: 5
+  powerUpDurationShield: 0
+  powerUpDurationDoublePoints: 0
   PowerUpText: {fileID: 0}
+  aura: {fileID: 0}
 --- !u!114 &236310298 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2522802996641404506, guid: 39f118c6492a2f8448aabcea3a7a250d,

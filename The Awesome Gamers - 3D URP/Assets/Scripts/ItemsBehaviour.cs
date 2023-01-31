@@ -14,12 +14,16 @@ public class ItemsBehaviour : MonoBehaviour
     public bool rotorBlades;
     private PowerUp powerupManager;
 
+    public GameObject aura;
+    //public GameObject aura;
+
     // Start is called before the first frame update
     void Start()
     {
         // PowerUpManager ist für das Verhalten der einzelnen PowerUps
         powerupManager = FindObjectOfType<PowerUp>();
         audioManager = FindObjectOfType <AudioManager>();
+        aura = GameObject.FindGameObjectWithTag("PowerUpAura");
     }
 
     // Update is called once per frame
@@ -71,6 +75,8 @@ public class ItemsBehaviour : MonoBehaviour
         {
             powerupManager.ActivateShield();
             FindObjectOfType<AudioManager>().Play("PowerUp");
+            aura.SetActive(true);
+            
         }
         Destroy(gameObject);
     }
