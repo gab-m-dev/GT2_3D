@@ -273,7 +273,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950014518423827444}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15, y: -7.458153, z: 94.3015}
+  m_LocalPosition: {x: 15, y: -7.458153, z: 153.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -666,7 +666,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913183611936066372}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.4, y: -7.4, z: -9.998505}
+  m_LocalPosition: {x: -2.4, y: -3.2, z: -257}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -946,7 +946,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3450402075434320781}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.9, y: 5.4, z: 60.001503}
+  m_LocalPosition: {x: 5.9, y: 13.73, z: 60.001503}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1698,7 +1698,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5951255742623920987}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.4, y: -20.1, z: 21.901505}
+  m_LocalPosition: {x: -9.4, y: -20.1, z: -108.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1729,7 +1729,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6195556408001543786}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27.5, y: -0.65815544, z: 175.8015}
+  m_LocalPosition: {x: -21.87, y: -0.65815544, z: 228}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2414,13 +2414,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUps:
-  - {fileID: 8224904989281456788, guid: 09fb01785aa83f84a80b78d3b5065964, type: 3}
-  - {fileID: 919132149155446097, guid: ca2a7e40c8f2e4d2dbf0dc2fefd49a6e, type: 3}
+  - {fileID: 7575043955980052441, guid: 137758413a1b19f4db323cb3f7fb1f51, type: 3}
+  - {fileID: 270298875629650527, guid: 884b69a13da3b2f49be58456c24cb924, type: 3}
   obsticles:
   - {fileID: 3017022394474212946, guid: 24ba10d22cd124c4ebe3e0ffdb794c7a, type: 3}
-  - {fileID: 4212737853218649866, guid: 135dc3ece82494e88bfce117c464b8e8, type: 3}
-  - {fileID: 1065259662014950746, guid: 1f2e914ab722ceb48b7562f70e8ca793, type: 3}
-  changeForPowerUp: 0
+  - {fileID: 2600363880285988418, guid: 135dc3ece82494e88bfce117c464b8e8, type: 3}
+  - {fileID: 4786143956922690685, guid: 4a95b30cfb3803d45a398bab7ffecfb2, type: 3}
+  changeForPowerUp: 0.2
   itemSpots:
   - {fileID: 6195556408001543786}
   - {fileID: 950014518423827444}
