@@ -10,6 +10,8 @@ public class PopulateHighScore : MonoBehaviour
 
     private List<ScoreData> scores;
     private const string SCORES_KEY = "scores";
+    //public TextMeshProUGUI topFiveNames;
+    //public TextMeshProUGUI topFiveScores;
     public TextMeshProUGUI topFiveHighscores;
     public TextMeshProUGUI currentScoreTxt;
 
@@ -22,6 +24,7 @@ public class PopulateHighScore : MonoBehaviour
         LoadScoresFromJson();
         currentScore = PlayerPrefs.GetFloat("currentScore");
         populateTopFiveHighscores();
+        //populateGameOverHighscoreTable();
     }
 
     private void LoadScoresFromJson(){
@@ -45,18 +48,46 @@ public class PopulateHighScore : MonoBehaviour
         {
             if (scores.Count > 5)
             {
-                topFiveHighscores.text =  scores[0].username + ":                               " + scores[0].score + "\n" + scores[1].username + ":                               " + scores[1].score + "\n" + scores[2].username + ":                               " + scores[2].score + "\n" + scores[3].username + ":                               " + scores[3].score;
+                topFiveHighscores.text = scores[0].username + ": " + scores[0].score + "\n" + scores[1].username + ": " + scores[1].score + "\n" + scores[2].username + ": " + scores[2].score + "\n" + scores[3].username + ": " + scores[3].score + "\n" + scores[4].username + ": " + scores[4].score;
             }
             else if (scores.Count > 0)
             {
                 int size = scores.Count;
-                string message = " ";
+                string message = "";
                 for (int i = 0; i < size; i++)
                 {
-                    message += scores[i].username + ":                               " + scores[i].score + "\n";
+                    message += scores[i].username + ": " + scores[i].score + "\n";
                 }
                 topFiveHighscores.text = message;
             }
         }
     }
+
+    /*
+    private void populateGameOverHighscoreTable()
+    {
+        currentScoreTxt.text = currentScore.ToString();
+        if (topFiveHighscores is not null)
+        {
+            if (scores.Count > 5)
+            {
+                topFiveNames.text = scores[0].username + "\n" + scores[1].username + "\n" + scores[2].username + "\n" + scores[3].username + "\n";
+                topFiveScores.text =scores[0].score + "\n" +scores[1].score + "\n" + scores[2].score + "\n" + scores[3].score;
+            }
+            else if (scores.Count > 0)
+            {
+                int size = scores.Count;
+                string scoreTxt = " ";
+                string nameTxt = " ";
+                for (int i = 0; i < size; i++)
+                {
+                    scoreTxt += scores[i].score + "\n";
+                    nameTxt += scores[i].username + "\n";
+                }
+                topFiveNames.text = nameTxt;
+                topFiveScores.text = scoreTxt;
+            }
+        }
+    }
+    */
 }
