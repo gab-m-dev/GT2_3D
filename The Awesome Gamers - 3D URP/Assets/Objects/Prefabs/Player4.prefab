@@ -5008,8 +5008,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66afaa2a553fd1d4286e89c0d17333aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSpeed: 55
-  forwardSpeed: 200
+  horizontalSpeed: 80
+  forwardSpeed: 350
 --- !u!1001 &8397201209386094437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5121,5 +5121,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e321806eb3c2d04d9272b46d6310a4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHitPoints: 2
+  MaxHitPoints: 3
   HitPoints: 0

@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalSpeed: 55
-  forwardSpeed: 200
+  forwardSpeed: 150
 --- !u!1 &5012354088815097293
 GameObject:
   m_ObjectHideFlags: 0
@@ -14735,7 +14735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e321806eb3c2d04d9272b46d6310a4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHitPoints: 2
+  MaxHitPoints: 1
   HitPoints: 0
 --- !u!1001 &2093373587447402134
 PrefabInstance:
