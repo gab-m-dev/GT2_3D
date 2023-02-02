@@ -72,7 +72,7 @@ public class PopulateHighScore : MonoBehaviour
         currentScoreTxt.text = currentScore.ToString();
         if (topFiveNames is not null && topFiveScores is not null)
         {
-            if (scores.Count > 5)
+            if (scores.Count >= 5)
             {
                 topFiveRanks.text = "1." + "\n" + "2." + "\n" + "3." + "\n" + "4." + "\n" + "5.";
                 topFiveNames.text = scores[0].username + "\n" + scores[1].username + "\n" + scores[2].username + "\n" + scores[3].username + "\n" + scores[4].username;
