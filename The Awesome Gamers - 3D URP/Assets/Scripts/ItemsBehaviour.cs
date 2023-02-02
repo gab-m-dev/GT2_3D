@@ -62,7 +62,7 @@ public class ItemsBehaviour : MonoBehaviour
                 if (powerupManager.getDamage() != 0)
                 {
                     FindObjectOfType<AudioManager>().Play("Explosion");
-                    player.TakeHit(2f);
+                    player.TakeHit(3f);
                 }
             }
         }
