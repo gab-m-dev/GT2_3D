@@ -13,66 +13,70 @@ public class GameController : MonoBehaviour
    
     public Text highScoreText;
      
-
     public Text rankLeaderboard;
     public Text usernameLeaderboard;
     public Text scoreLeaderboard;
-
     
     public RowUI rowUI;
 
 
     public GameObject Header;
     public GameObject Leaderboard;
-    
-    
 
-void Awake(){
-     DontDestroyOnLoad(this);
+
+    //Character selection
+    public GameObject[] characters;
+    public int selectedCharacter = 0;
+
+    public static GameController instance;
+
+
+    void Awake(){
+
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        
+        }
+     
 }
     
    // Start is called before the first frame update
-void Start()
-{
+    void Start()
+    {
     
-    startButton.onClick.AddListener(StartGame);
-    resetButton.onClick.AddListener(DeletePlayerPrefs);
-    //Header.gameObject.SetActive(false);
-    //Leaderboard.gameObject.SetActive(false);
+        startButton.onClick.AddListener(StartGame);
+        resetButton.onClick.AddListener(ClearData);
 
-    gameStarted = true;
-    Time.timeScale = 1;
-}
-
-// Update is called once per frame
-void Update()
-{
-    // If player hits the escape key, toggle gameStarted variable
-    if (Input.GetKeyDown(KeyCode.Escape))
-    {
-        gameStarted = !gameStarted;
-
-    }
-
-    // If game is not started, set Time.timeScale to 0
-    if (!gameStarted)
-    {
-        Time.timeScale = 0;
-     /*   resetButton.gameObject.SetActive(false);
-        startButton.gameObject.SetActive(false);
-        inputName.gameObject.SetActive(false);
-        Header.gameObject.SetActive(false);
-        Leaderboard.gameObject.SetActive(false); */
-        
-    }
-    else
-    {
-        //resetButton.gameObject.SetActive(true);
+        gameStarted = true;
         Time.timeScale = 1;
-        //Header.gameObject.SetActive(true);
-      //  Leaderboard.gameObject.SetActive(true);
     }
-}
+
+    // Update is called once per frame
+    void Update()
+    {
+        /*
+        // If player hits the escape key, toggle gameStarted variable
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            gameStarted = !gameStarted;
+        }
+
+        // If game is not started, set Time.timeScale to 0
+        if (!gameStarted)
+        {
+            Time.timeScale = 0;        
+        }
+        else
+        {
+            //resetButton.gameObject.SetActive(true);
+            Time.timeScale = 1;
+            //Header.gameObject.SetActive(true);
+            //  Leaderboard.gameObject.SetActive(true);
+        }
+        */
+    }
 
 
      public void StartGame(){
@@ -81,19 +85,45 @@ void Update()
 
         gameStarted = true;
         Time.timeScale = 1;
+        PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
+        Debug.Log("Timae scale: " + Time.timeScale);
+                
+        FindObjectOfType<AudioManager>().Stop("MenuMusic");
+        FindObjectOfType<AudioManager>().Play("GameMusic");
+        FindObjectOfType<AudioManager>().Play("ButtonSubmit");
+        FindObjectOfType<AudioManager>().Play("SpaceShip");
+
+
         SceneManager.LoadScene("Game");
         
     }
 
-    public void DeletePlayerPrefs(){
+    public void ClearData()
+    {
+        //PlayerPrefs.DeleteKey("scores");
 
-        PlayerPrefs.DeleteAll();
-        highScoreText.text = "Highscore: " + 0;
-        
+        //PlayerPrefs.DeleteAll();
+        Highscore.inst.ClearData();
+        // highScoreText.text = "Highscore: " + 0;
     }
 
+    public void NextCharacter()
+    {
+        characters[selectedCharacter].SetActive(false);
+        selectedCharacter = (selectedCharacter + 1) % characters.Length;
+        characters[selectedCharacter].SetActive(true);
+    }
 
-    
+    public void PreviousCharacter()
+    {
+        characters[selectedCharacter].SetActive(false);
+        selectedCharacter--;
+        if (selectedCharacter < 0)
+        {
+            selectedCharacter += characters.Length;
+        }
+        characters[selectedCharacter].SetActive(true);
+    }
 
 }
 

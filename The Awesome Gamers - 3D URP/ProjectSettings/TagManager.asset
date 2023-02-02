@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Coin
   - ItemSpot
+  - HealthText
+  - PlayerTransform
+  - PowerUpAura
   layers:
   - Default
   - TransparentFX

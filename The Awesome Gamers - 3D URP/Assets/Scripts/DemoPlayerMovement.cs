@@ -18,7 +18,7 @@ public class DemoPlayerMovement : MonoBehaviour
     void Start()
     {
         
-         Time.timeScale = 0;
+         Time.timeScale = 1f;
        
         rigidbody = transform.GetComponent<Rigidbody>();
         //DISTANCE
@@ -31,6 +31,16 @@ public class DemoPlayerMovement : MonoBehaviour
         // Forward Movement
         transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed, Space.World);
         movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+
+        /*
+        //Tilt spaceship when moving left and right
+        float z = Input.GetAxis("Horizontal") * 15.0f; // might be negative, just test it
+        Vector3 euler = transform.localEulerAngles;
+        euler.z = Mathf.Lerp(euler.z, z, 2.0f * Time.deltaTime);
+        transform.localEulerAngles = euler;
+        */
+
+        
     }
 
 

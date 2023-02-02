@@ -9,12 +9,15 @@ public class HealthBehaviour : MonoBehaviour
 
     public float MaxHitPoints;
     public float HitPoints;
-    public Text HealthText;
-    public Highscore highscoreScript;
-   
+    private Text HealthText;
+
+    private bool isDead;
+     
     // Start is called before the first frame update
     void Start()
     {
+        isDead = false;
+        HealthText = GameObject.FindGameObjectWithTag("HealthText").GetComponent<Text>();
         HitPoints = MaxHitPoints;
         HealthText.text = "Health: " + HitPoints;
     }
@@ -26,18 +29,23 @@ public class HealthBehaviour : MonoBehaviour
     }
 
     public void TakeHit(float damage){
+        
         HitPoints -= damage;
         HealthText.text = "Health: " + HitPoints;
-        if(HitPoints <= 0)
+        if(HitPoints <= 0 && isDead == false)
         {
-            
+            isDead = true;
             Highscore.inst.updateList();
             Destroy(gameObject);
+            FindObjectOfType<AudioManager>().Stop("SpaceShip");
+            FindObjectOfType<AudioManager>().Stop("GameMusic");
+            FindObjectOfType<AudioManager>().Play("MenuMusic");
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
             Time.timeScale = 0;
            
         }
+        
     }
 }

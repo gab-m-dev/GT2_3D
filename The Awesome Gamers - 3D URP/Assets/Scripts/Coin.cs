@@ -9,11 +9,12 @@ public class Coin : MonoBehaviour
     
     void OnTriggerEnter(Collider collider){
     
-        if(collider.gameObject.name != "StarSparrow1"){
+        if(collider.gameObject.tag != "Player"){
             return;
         } 
 
         Highscore.inst.increaseScore(powerupManager.getPoint());
+        FindObjectOfType<AudioManager>().Play("Collect");
         Destroy(gameObject);
     }
 

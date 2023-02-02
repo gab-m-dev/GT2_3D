@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2522802996641404505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2522802996641404507}
+  - component: {fileID: 2522802996641404506}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2522802996641404507
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2522802996641404505}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 95.042816, y: 450, z: -6.42572}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2522802996641404506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2522802996641404505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ce7bed8f3b67049a6d67ff7b15b3d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetButton: {fileID: 0}
+  startButton: {fileID: 0}
+  highScoreText: {fileID: 0}
+  rankLeaderboard: {fileID: 0}
+  usernameLeaderboard: {fileID: 0}
+  scoreLeaderboard: {fileID: 0}
+  rowUI: {fileID: 1929486192953641851, guid: b5f4952e9222366499cec21e503ff0b4, type: 3}
+  Header: {fileID: 0}
+  Leaderboard: {fileID: 0}
+  characters:
+  - {fileID: 5012354088785272662, guid: 95b0ec360b323f74694bf3ac0e8d4d95, type: 3}
+  - {fileID: 5053000654119534377, guid: 3e8b900230f5e0344ab26339985f708b, type: 3}
+  - {fileID: 2971892540979301607, guid: a474ef503a692634081bc9d8f4ac9510, type: 3}
+  - {fileID: 112105722757375766, guid: cb6ff66bb68c9f145b516f9358b1e3ad, type: 3}
+  - {fileID: 8397201207433506967, guid: 9b3e4ab3f48d38443b05e151766883ba, type: 3}
+  - {fileID: 737647391499477599, guid: 10cdc34b3f38fd247af01dc1ae8114fb, type: 3}
+  selectedCharacter: 0

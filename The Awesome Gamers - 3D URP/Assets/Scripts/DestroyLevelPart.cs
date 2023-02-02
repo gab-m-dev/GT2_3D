@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class DestroyLevelPart : MonoBehaviour
 {
+
+    private Transform playerTransform;
+    
     // Start is called before the first frame update
     void Start()
     {
+        playerTransform = GameObject.FindWithTag("PlayerTransform").transform;
         StartCoroutine(DestroyObjects());        
     }
 
@@ -14,13 +18,20 @@ public class DestroyLevelPart : MonoBehaviour
     void Update()
     {
         
+        
     }
 
     IEnumerator DestroyObjects(){
-        yield return new WaitForSeconds(9f);
-        foreach (Transform child in gameObject.transform) {
-            GameObject.Destroy(child.gameObject);
+        while(true){
+            yield return new WaitForSeconds(3f);
+     
+            if ((gameObject.transform.position.z - playerTransform.position.z) < -650f){
+                foreach (Transform child in gameObject.transform) {
+                    GameObject.Destroy(child.gameObject);
+                }
+                Destroy(gameObject);
+            }
         }
-        Destroy(gameObject);
+        
     }
 }
