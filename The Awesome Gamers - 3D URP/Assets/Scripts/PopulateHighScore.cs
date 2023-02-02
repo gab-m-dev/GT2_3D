@@ -75,10 +75,10 @@ public class PopulateHighScore : MonoBehaviour
             if (scores.Count > 5)
             {
                 topFiveRanks.text = "1." + "\n" + "2." + "\n" + "3." + "\n" + "4." + "\n" + "5.";
-                topFiveNames.text = scores[0].username + "\n" + scores[1].username + "\n" + scores[2].username + "\n" + scores[3].username + "\n";
-                topFiveScores.text =scores[0].score + "\n" +scores[1].score + "\n" + scores[2].score + "\n" + scores[3].score;
+                topFiveNames.text = scores[0].username + "\n" + scores[1].username + "\n" + scores[2].username + "\n" + scores[3].username + "\n" + scores[4].username;
+                topFiveScores.text =scores[0].score + "\n" +scores[1].score + "\n" + scores[2].score + "\n" + scores[3].score + "\n" + scores[4].score;
             }
-            else if (scores.Count > 0 && scores.Count < 5)
+            else if (scores.Count < 5)
             {
                 int size = scores.Count;
                 string rankTxt = "";
