@@ -18,7 +18,7 @@ public class DemoPlayerMovement : MonoBehaviour
     void Start()
     {
         
-         Time.timeScale = 0;
+         Time.timeScale = 1f;
        
         rigidbody = transform.GetComponent<Rigidbody>();
         //DISTANCE

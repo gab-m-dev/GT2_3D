@@ -9,12 +9,14 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
-    public GameObject controlsMenuUI;
+    //public GameObject controlsMenuUI;
 
 
     private void Start()
     {
         GameIsPaused = false;
+        Debug.Log("Pause Menu: " + GameIsPaused);
+        //Time.timeScale = 1f;
     }
 
     // Update is called once per frame
@@ -46,10 +48,12 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
     }
 
+    /*
     public void LoadMenu()
     {
         controlsMenuUI.SetActive(true);
     }
+    */
 
     public void QuitGame()
     {
@@ -57,8 +61,11 @@ public class PauseMenu : MonoBehaviour
         FindObjectOfType<AudioManager>().Stop("SpaceShip");
         FindObjectOfType<AudioManager>().Play("MenuMusic");
         FindObjectOfType<AudioManager>().Play("ButtonSubmit");
-        
+
+        Time.timeScale = 1f;
+        GameIsPaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -2);
+        Debug.Log("Game paused: " + GameIsPaused);
         
     }
 

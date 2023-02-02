@@ -56,6 +56,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         // If player hits the escape key, toggle gameStarted variable
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -74,6 +75,7 @@ public class GameController : MonoBehaviour
             //Header.gameObject.SetActive(true);
             //  Leaderboard.gameObject.SetActive(true);
         }
+        */
     }
 
 
@@ -84,7 +86,8 @@ public class GameController : MonoBehaviour
         gameStarted = true;
         Time.timeScale = 1;
         PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
-        
+        Debug.Log("Timae scale: " + Time.timeScale);
+                
         FindObjectOfType<AudioManager>().Stop("MenuMusic");
         FindObjectOfType<AudioManager>().Play("GameMusic");
         FindObjectOfType<AudioManager>().Play("ButtonSubmit");
