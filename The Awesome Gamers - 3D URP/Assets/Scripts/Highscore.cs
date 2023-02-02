@@ -64,7 +64,7 @@ public class Highscore : MonoBehaviour
         if (scores.Count <= 5)
         {
             int size = scores.Count;
-            for (int i = 0; i < size; i++)
+            for (int i = 0; i < Mathf.Min(scores.Count, 3); i++)
             {
                 var row = Instantiate(rowUI, transform).GetComponent<RowUI>();
                 row.rank.text = (i + 1).ToString();

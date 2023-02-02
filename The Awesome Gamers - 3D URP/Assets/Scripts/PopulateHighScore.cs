@@ -10,9 +10,10 @@ public class PopulateHighScore : MonoBehaviour
 
     private List<ScoreData> scores;
     private const string SCORES_KEY = "scores";
-    //public TextMeshProUGUI topFiveNames;
-    //public TextMeshProUGUI topFiveScores;
-    public TextMeshProUGUI topFiveHighscores;
+    public TextMeshProUGUI topFiveRanks;
+    public TextMeshProUGUI topFiveNames;
+    public TextMeshProUGUI topFiveScores;
+    //public TextMeshProUGUI topFiveHighscores;
     public TextMeshProUGUI currentScoreTxt;
 
     private float currentScore;
@@ -23,8 +24,8 @@ public class PopulateHighScore : MonoBehaviour
         scores = new List<ScoreData>();
         LoadScoresFromJson();
         currentScore = PlayerPrefs.GetFloat("currentScore");
-        populateTopFiveHighscores();
-        //populateGameOverHighscoreTable();
+        //populateTopFiveHighscores();
+        populateGameOverHighscoreTable();
     }
 
     private void LoadScoresFromJson(){
@@ -41,6 +42,7 @@ public class PopulateHighScore : MonoBehaviour
       }
     }
 
+    /*
     private void populateTopFiveHighscores()
     {
         currentScoreTxt.text = currentScore.ToString();
@@ -62,32 +64,36 @@ public class PopulateHighScore : MonoBehaviour
             }
         }
     }
+    */
 
-    /*
+    
     private void populateGameOverHighscoreTable()
     {
         currentScoreTxt.text = currentScore.ToString();
-        if (topFiveHighscores is not null)
+        if (topFiveNames is not null && topFiveScores is not null)
         {
             if (scores.Count > 5)
             {
+                topFiveRanks.text = "1." + "\n" + "2." + "\n" + "3." + "\n" + "4." + "\n" + "5.";
                 topFiveNames.text = scores[0].username + "\n" + scores[1].username + "\n" + scores[2].username + "\n" + scores[3].username + "\n";
                 topFiveScores.text =scores[0].score + "\n" +scores[1].score + "\n" + scores[2].score + "\n" + scores[3].score;
             }
-            else if (scores.Count > 0)
+            else if (scores.Count > 0 && scores.Count < 5)
             {
                 int size = scores.Count;
-                string scoreTxt = " ";
-                string nameTxt = " ";
+                string rankTxt = "";
+                string scoreTxt = "";
+                string nameTxt = "";
                 for (int i = 0; i < size; i++)
                 {
+                    rankTxt += (i + 1).ToString() + "\n";
                     scoreTxt += scores[i].score + "\n";
                     nameTxt += scores[i].username + "\n";
                 }
+                topFiveRanks.text = rankTxt;
                 topFiveNames.text = nameTxt;
                 topFiveScores.text = scoreTxt;
             }
         }
     }
-    */
 }
