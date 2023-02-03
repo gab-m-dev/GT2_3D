@@ -11,11 +11,14 @@ public class DemoPlayerMovement : MonoBehaviour
     private Vector3 movement;
     private float rotation;
     public float rotationSpeed;
-    private Quaternion originalRotation;
-    private Quaternion qTo;
-
+   
     private float currentAngle;
     private float horizontalInput;
+
+    public Transform playerTransform;
+    public Transform sunTransform;
+    private Vector3 sunPosition;
+    private Vector3 playerPoistion;
 
     //DISTANCE
     private float distance;
@@ -26,9 +29,9 @@ public class DemoPlayerMovement : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        originalRotation = transform.GetChild(1).rotation;
-        qTo = transform.GetChild(1).rotation;
-
+        sunPosition = sunTransform.position;
+        //sunTransform.SetParent(null, false);
+        
         rigidbody = transform.GetComponent<Rigidbody>();
 
         //DISTANCE
@@ -54,7 +57,11 @@ public class DemoPlayerMovement : MonoBehaviour
             currentAngle = Mathf.Lerp(currentAngle, 0, rotationSpeed / 10 * Time.deltaTime);
         }
         transform.GetChild(1).rotation = Quaternion.Euler(0, 0, currentAngle);
-       
+
+        playerPoistion = playerTransform.position;
+        sunTransform.position = new Vector3(sunPosition.x, sunPosition.y, playerPoistion.z + 900);
+
+
     }
 
 
