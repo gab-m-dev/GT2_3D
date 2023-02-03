@@ -13,12 +13,21 @@ MonoBehaviour:
   m_Name: Spaceships
   m_EditorClassIdentifier: 
   spaceship:
-  - spaceship: {fileID: 1510364872509504, guid: f805c7b2f982faf43833878e4f22ae2a,
+  - spaceship: {fileID: 5012354088785272662, guid: 95b0ec360b323f74694bf3ac0e8d4d95,
       type: 3}
-    spaceshipName: FalconX
-  - spaceship: {fileID: 1227962952135790, guid: 137404c3ccadbc94c8eafe555ab8aaee,
+    spaceshipName: 'Speed: 150'
+  - spaceship: {fileID: 5053000654119534377, guid: 3e8b900230f5e0344ab26339985f708b,
       type: 3}
-    spaceshipName: Millenium Falcon
-  - spaceship: {fileID: 5237423627633854906, guid: cb6ff66bb68c9f145b516f9358b1e3ad,
+    spaceshipName: 'Speed: 200'
+  - spaceship: {fileID: 2971892540979301607, guid: a474ef503a692634081bc9d8f4ac9510,
       type: 3}
-    spaceshipName: Stardestroyer
+    spaceshipName: 'Speed: 250'
+  - spaceship: {fileID: 112105722757375766, guid: cb6ff66bb68c9f145b516f9358b1e3ad,
+      type: 3}
+    spaceshipName: 'Speed: 300'
+  - spaceship: {fileID: 8397201207433506967, guid: 9b3e4ab3f48d38443b05e151766883ba,
+      type: 3}
+    spaceshipName: 'Speed: 350'
+  - spaceship: {fileID: 737647391499477599, guid: 10cdc34b3f38fd247af01dc1ae8114fb,
+      type: 3}
+    spaceshipName: 'Speed: 400'
