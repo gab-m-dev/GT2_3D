@@ -11,11 +11,19 @@ public class SpaceshipManager : MonoBehaviour
     public TMP_Text nameText;
     public GameObject spaceship;
 
-    private int selectedShip = 2;
+    private int selectedShip = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        if(!PlayerPrefs.HasKey("selectedCharacter"))
+        {
+            selectedShip = 0;
+        } else
+        {
+            Load();
+        }
+
         UpdateSpaceship(selectedShip);
     }
 
@@ -28,6 +36,7 @@ public class SpaceshipManager : MonoBehaviour
             selectedShip = 0;
         }
         UpdateSpaceship(selectedShip);
+        Save();
     }
 
     public void BackOption()
@@ -38,6 +47,7 @@ public class SpaceshipManager : MonoBehaviour
             selectedShip = spaceshipDB.spaceshipCount - 1;
         }
         UpdateSpaceship(selectedShip);
+        Save();
     }
 
     private void UpdateSpaceship(int selectedShip)
@@ -45,5 +55,15 @@ public class SpaceshipManager : MonoBehaviour
         Spaceship ship = spaceshipDB.GetSpaceship(selectedShip);
         spaceship = ship.spaceship;
         nameText.text = ship.spaceshipName;
+    }
+
+    private void Load()
+    {
+        selectedShip = PlayerPrefs.GetInt("selectedShip");
+    }
+
+    private void Save()
+    {
+        PlayerPrefs.SetInt("selectedShip", selectedShip);
     }
 }

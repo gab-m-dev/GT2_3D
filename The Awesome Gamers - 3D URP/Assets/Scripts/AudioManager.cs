@@ -14,6 +14,8 @@ public class AudioManager : MonoBehaviour
 
     public double sliderValue = 1;
 
+    //Add Music and Effect sliders
+
     private void Awake()
     {
         if (instance == null)
@@ -96,9 +98,31 @@ public class AudioManager : MonoBehaviour
     public void UpdateMusicMixerVolume()
     {
         musicMixerGroup.audioMixer.SetFloat("MusicVolume", Mathf.Log10(AudioOptionsManager.musicVolume) * 20);
+        //Save("MusicVolume");
     }
     public void UpdateEffectsMixerVolume()
     {
         soundEffectsMixerGroup.audioMixer.SetFloat("SoundEffectVolume", Mathf.Log10(AudioOptionsManager.effectsVolume) * 20);
+        //Save("SoundEffectVolume");
     }
+
+    /*
+    public void Save(string name)
+    {
+        if(name == "MusicVolume")
+        {
+            PlayerPrefs.SetFloat(name, musicSlider.value);
+        } else if (name == "SoundEffectVolume")
+        {
+            PlayerPrefs.SetFloat(name, soundEffectSlider.value);
+        }
+       
+    }
+
+    public void Load()
+    {
+        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume");
+        soundEffectsSlider.value = PlayerPrefs.GetFloat("SoundEffectVolume");
+    }
+    */
 }
