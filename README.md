@@ -73,4 +73,4 @@ Gabor Muff Andrian Dimitrov
 Software Unity Version 2021.3.11f1
 
 ## License/ Copyright
-
+bearbeitetes "Wormhole Concept" (https://skfb.ly/6TQKs) by James Truhlar is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). 
