@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System.Linq;
 using UnityEngine.SceneManagement;
 
+
 public class GameController : MonoBehaviour
 {
     private bool gameStarted;
@@ -26,6 +27,7 @@ public class GameController : MonoBehaviour
 
     //Character selection
     public GameObject[] characters;
+    public GameObject[] stats;
     public int selectedCharacter = 0;
 
     public static GameController instance;
@@ -110,19 +112,23 @@ public class GameController : MonoBehaviour
     public void NextCharacter()
     {
         characters[selectedCharacter].SetActive(false);
+        stats[selectedCharacter].SetActive(false);
         selectedCharacter = (selectedCharacter + 1) % characters.Length;
         characters[selectedCharacter].SetActive(true);
+        stats[selectedCharacter].SetActive(true);
     }
 
     public void PreviousCharacter()
     {
         characters[selectedCharacter].SetActive(false);
+        stats[selectedCharacter].SetActive(false);
         selectedCharacter--;
         if (selectedCharacter < 0)
         {
             selectedCharacter += characters.Length;
         }
         characters[selectedCharacter].SetActive(true);
+        stats[selectedCharacter].SetActive(true);
     }
 
 }

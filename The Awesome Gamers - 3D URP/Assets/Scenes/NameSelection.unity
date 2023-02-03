@@ -1871,6 +1871,43 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668667976}
   m_CullTransparentMesh: 1
+--- !u!1 &684841387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 684841388}
+  m_Layer: 0
+  m_Name: SpaceshipStats
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &684841388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684841387}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 500, y: -210, z: 0}
+  m_LocalScale: {x: 1.9161676, y: 1.9161676, z: 1.9161676}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 854363140}
+  - {fileID: 1903626175}
+  - {fileID: 1933355232}
+  - {fileID: 1229515695}
+  - {fileID: 1983299039}
+  - {fileID: 1913522431}
+  m_Father: {fileID: 1750034361}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &854363139
 GameObject:
   m_ObjectHideFlags: 0
@@ -1883,7 +1920,7 @@ GameObject:
   - component: {fileID: 854363142}
   - component: {fileID: 854363141}
   m_Layer: 0
-  m_Name: SpeedTxt
+  m_Name: ShipStats1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1896,17 +1933,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854363139}
-  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 144}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.000999, y: 1.000999, z: 1.000999}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1008167446}
-  m_RootOrder: 3
+  m_Father: {fileID: 684841388}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 760, y: 100}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &854363141
@@ -2721,12 +2758,12 @@ GameObject:
   - component: {fileID: 1229515697}
   - component: {fileID: 1229515696}
   m_Layer: 0
-  m_Name: SpeedTxt
+  m_Name: ShipStats4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1229515695
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2734,17 +2771,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229515694}
-  m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 144}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.000999, y: 1.000999, z: 1.000999}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 165263542}
-  m_RootOrder: 2
+  m_Father: {fileID: 684841388}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 760, y: 100}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1229515696
@@ -3107,8 +3144,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391019838}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -960, y: -539.94006, z: 0}
-  m_LocalScale: {x: 1.9180819, y: 1.9180819, z: 1.9180819}
+  m_LocalPosition: {x: -0.000030517578, y: 0.21878052, z: 0}
+  m_LocalScale: {x: 1.000999, y: 1.000999, z: 1.000999}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1008167446}
@@ -3117,8 +3154,8 @@ Transform:
   - {fileID: 165263542}
   - {fileID: 1935523996}
   - {fileID: 85263142}
-  m_Father: {fileID: 1750034361}
-  m_RootOrder: 17
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1434082783
 GameObject:
@@ -4094,7 +4131,7 @@ RectTransform:
   - {fileID: 1900069266}
   - {fileID: 580838961}
   - {fileID: 958691590}
-  - {fileID: 1391019839}
+  - {fileID: 684841388}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4316,12 +4353,12 @@ GameObject:
   - component: {fileID: 1903626177}
   - component: {fileID: 1903626176}
   m_Layer: 0
-  m_Name: SpeedTxt
+  m_Name: ShipStats2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1903626175
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4329,17 +4366,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903626174}
-  m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 144}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.000999, y: 1.000999, z: 1.000999}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1160045152}
-  m_RootOrder: 2
+  m_Father: {fileID: 684841388}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 760, y: 100}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1903626176
@@ -4631,12 +4668,12 @@ GameObject:
   - component: {fileID: 1913522433}
   - component: {fileID: 1913522432}
   m_Layer: 0
-  m_Name: 'SpeedTxt '
+  m_Name: ShipStats6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1913522431
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4644,17 +4681,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913522430}
-  m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 144}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.000999, y: 1.000999, z: 1.000999}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 85263142}
-  m_RootOrder: 2
+  m_Father: {fileID: 684841388}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 759, y: 97}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1913522432
@@ -4843,12 +4880,12 @@ GameObject:
   - component: {fileID: 1933355234}
   - component: {fileID: 1933355233}
   m_Layer: 0
-  m_Name: SpeedTxt
+  m_Name: ShipStats3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1933355232
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4856,17 +4893,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933355231}
-  m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 144}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.000999, y: 1.000999, z: 1.000999}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1274702232}
-  m_RootOrder: 5
+  m_Father: {fileID: 684841388}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 759, y: 100}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1933355233
@@ -4991,12 +5028,12 @@ GameObject:
   - component: {fileID: 1983299041}
   - component: {fileID: 1983299040}
   m_Layer: 0
-  m_Name: SpeedTxt
+  m_Name: ShipStats5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1983299039
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5004,17 +5041,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983299038}
-  m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 144}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.000999, y: 1.000999, z: 1.000999}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1935523996}
-  m_RootOrder: 2
+  m_Father: {fileID: 684841388}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 760, y: 100}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1983299040
@@ -5601,6 +5638,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7969685267817657460, guid: 26105019a6a247e48923d7627e7c700d,
         type: 3}
+    - target: {fileID: 2522802996641404506, guid: 39f118c6492a2f8448aabcea3a7a250d,
+        type: 3}
+      propertyPath: stats.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522802996641404506, guid: 39f118c6492a2f8448aabcea3a7a250d,
+        type: 3}
+      propertyPath: stats.Array.data[0]
+      value: 
+      objectReference: {fileID: 854363139}
+    - target: {fileID: 2522802996641404506, guid: 39f118c6492a2f8448aabcea3a7a250d,
+        type: 3}
+      propertyPath: stats.Array.data[1]
+      value: 
+      objectReference: {fileID: 1903626174}
+    - target: {fileID: 2522802996641404506, guid: 39f118c6492a2f8448aabcea3a7a250d,
+        type: 3}
+      propertyPath: stats.Array.data[2]
+      value: 
+      objectReference: {fileID: 1933355231}
+    - target: {fileID: 2522802996641404506, guid: 39f118c6492a2f8448aabcea3a7a250d,
+        type: 3}
+      propertyPath: stats.Array.data[3]
+      value: 
+      objectReference: {fileID: 1229515694}
+    - target: {fileID: 2522802996641404506, guid: 39f118c6492a2f8448aabcea3a7a250d,
+        type: 3}
+      propertyPath: stats.Array.data[4]
+      value: 
+      objectReference: {fileID: 1983299038}
+    - target: {fileID: 2522802996641404506, guid: 39f118c6492a2f8448aabcea3a7a250d,
+        type: 3}
+      propertyPath: stats.Array.data[5]
+      value: 
+      objectReference: {fileID: 1913522430}
     - target: {fileID: 2522802996641404506, guid: 39f118c6492a2f8448aabcea3a7a250d,
         type: 3}
       propertyPath: characters.Array.size
