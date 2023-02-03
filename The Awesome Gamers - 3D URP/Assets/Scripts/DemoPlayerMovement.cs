@@ -10,10 +10,12 @@ public class DemoPlayerMovement : MonoBehaviour
     private Rigidbody rigidbody;
     private Vector3 movement;
     private float rotation;
-    private float rotationSpeed = 1f;
+    public float rotationSpeed;
     private Quaternion originalRotation;
     private Quaternion qTo;
 
+    private float currentAngle;
+    private float horizontalInput;
 
     //DISTANCE
     private float distance;
@@ -42,21 +44,17 @@ public class DemoPlayerMovement : MonoBehaviour
         // Vertical/horizontal movement
         movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
 
-        // Horizontal movement rotation
-        rotation += Input.GetAxis("Horizontal");
-        rotation = Mathf.Clamp(rotation, -10f, 10f);
-        transform.GetChild(1).localEulerAngles = new Vector3(0, 0, -rotation);
-
-        var zQuaternion = Quaternion.AngleAxis(rotation, Vector3.forward);
-        qTo = originalRotation * zQuaternion;
-
-        if (Input.GetAxis("Horizontal") == 0)
+        // Horizontal roll movement
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        if (horizontalInput != 0)
         {
-            //transform.GetChild(1).rotation = Quaternion.identity;
-            //Debug.Log("Halloooooooo");
-            var step = rotationSpeed * Time.deltaTime;
-            transform.GetChild(1).rotation = Quaternion.Slerp(transform.GetChild(1).rotation, qTo, step);
+            currentAngle = Mathf.Clamp(currentAngle + -horizontalInput * rotationSpeed * Time.deltaTime, -15f, 15f);
+        } else
+        {
+            currentAngle = Mathf.Lerp(currentAngle, 0, rotationSpeed / 10 * Time.deltaTime);
         }
+        transform.GetChild(1).rotation = Quaternion.Euler(0, 0, currentAngle);
+       
     }
 
 
